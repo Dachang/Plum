@@ -11,7 +11,9 @@ import UIKit
 class FirstAidViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var firstAidTableView: UITableView!
+    
     var firstAidArray : [FirstAidEntry] = [FirstAidEntry]()
+    var noteEditingViewController : FirstAidDetailViewController?
     
     override func viewWillAppear(_ animated: Bool) {
         
@@ -55,6 +57,10 @@ class FirstAidViewController: UIViewController, UITableViewDelegate, UITableView
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     // MARK: - Initialize Data
     func readFirstAidDataFromFile() {
         if let path = Bundle.main.path(forResource: "FirstAidList", ofType: "plist") {
@@ -66,14 +72,12 @@ class FirstAidViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
-    /*
     // MARK: - Navigation
-
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        let firstAidDetailViewController = segue.destination as? FirstAidDetailViewController
+        let currentIndex = (firstAidTableView.indexPath(for: sender as! FirstAidTableViewCell)?.row)!
+        firstAidDetailViewController?.title = firstAidArray[currentIndex].firstAidName
     }
-    */
 
 }

@@ -15,7 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        window?.tintColor = UIColor(red: 1.0, green: 48/255.0, blue: 67/255.0, alpha: 1.00)
+        
         UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor(red: 1.0, green: 48/255.0, blue: 67/255.0, alpha: 1.00)], for: .selected)
+        
         return true
     }
 

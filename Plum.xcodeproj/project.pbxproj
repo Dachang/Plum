@@ -17,6 +17,7 @@
 		1312C53D1DDD6D6900058BFC /* FirstAidTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1312C53C1DDD6D6900058BFC /* FirstAidTableViewCell.swift */; };
 		1312C5401DDD75E900058BFC /* FirstAidEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1312C53F1DDD75E900058BFC /* FirstAidEntry.swift */; };
 		1312C5421DDD7AC000058BFC /* FirstAidList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1312C5411DDD7AC000058BFC /* FirstAidList.plist */; };
+		1312C5441DDD915100058BFC /* FirstAidDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1312C5431DDD915100058BFC /* FirstAidDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		1312C53C1DDD6D6900058BFC /* FirstAidTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstAidTableViewCell.swift; sourceTree = "<group>"; };
 		1312C53F1DDD75E900058BFC /* FirstAidEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstAidEntry.swift; sourceTree = "<group>"; };
 		1312C5411DDD7AC000058BFC /* FirstAidList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FirstAidList.plist; sourceTree = "<group>"; };
+		1312C5431DDD915100058BFC /* FirstAidDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstAidDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				1312C53E1DDD75C400058BFC /* DataModel */,
 				1312C51A1DDD309200058BFC /* AppDelegate.swift */,
 				1312C51C1DDD309200058BFC /* ViewController.swift */,
+				1312C5431DDD915100058BFC /* FirstAidDetailViewController.swift */,
 				1312C53A1DDD67F600058BFC /* FirstAidViewController.swift */,
 				1312C53C1DDD6D6900058BFC /* FirstAidTableViewCell.swift */,
 				1312C51E1DDD309200058BFC /* Main.storyboard */,
@@ -227,6 +230,7 @@
 				1312C53B1DDD67F600058BFC /* FirstAidViewController.swift in Sources */,
 				1312C51B1DDD309200058BFC /* AppDelegate.swift in Sources */,
 				1312C53D1DDD6D6900058BFC /* FirstAidTableViewCell.swift in Sources */,
+				1312C5441DDD915100058BFC /* FirstAidDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
