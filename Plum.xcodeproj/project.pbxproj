@@ -18,6 +18,10 @@
 		1312C5401DDD75E900058BFC /* FirstAidEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1312C53F1DDD75E900058BFC /* FirstAidEntry.swift */; };
 		1312C5421DDD7AC000058BFC /* FirstAidList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1312C5411DDD7AC000058BFC /* FirstAidList.plist */; };
 		1312C5441DDD915100058BFC /* FirstAidDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1312C5431DDD915100058BFC /* FirstAidDetailViewController.swift */; };
+		1312C5461DDE2FD700058BFC /* NearbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1312C5451DDE2FD700058BFC /* NearbyViewController.swift */; };
+		139CC2BA1DDE420D00B9DFB6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139CC2B91DDE420D00B9DFB6 /* ProfileViewController.swift */; };
+		139CC2BC1DDE421C00B9DFB6 /* ProfileDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139CC2BB1DDE421C00B9DFB6 /* ProfileDetailViewController.swift */; };
+		139CC2C01DDE46C700B9DFB6 /* ProfileDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139CC2BF1DDE46C700B9DFB6 /* ProfileDetailTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +50,10 @@
 		1312C53F1DDD75E900058BFC /* FirstAidEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstAidEntry.swift; sourceTree = "<group>"; };
 		1312C5411DDD7AC000058BFC /* FirstAidList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FirstAidList.plist; sourceTree = "<group>"; };
 		1312C5431DDD915100058BFC /* FirstAidDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstAidDetailViewController.swift; sourceTree = "<group>"; };
+		1312C5451DDE2FD700058BFC /* NearbyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyViewController.swift; sourceTree = "<group>"; };
+		139CC2B91DDE420D00B9DFB6 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		139CC2BB1DDE421C00B9DFB6 /* ProfileDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileDetailViewController.swift; sourceTree = "<group>"; };
+		139CC2BF1DDE46C700B9DFB6 /* ProfileDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileDetailTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,12 +95,11 @@
 		1312C5191DDD309200058BFC /* Plum */ = {
 			isa = PBXGroup;
 			children = (
+				139CC2BE1DDE46A500B9DFB6 /* Controller */,
+				139CC2BD1DDE469A00B9DFB6 /* View */,
 				1312C53E1DDD75C400058BFC /* DataModel */,
 				1312C51A1DDD309200058BFC /* AppDelegate.swift */,
 				1312C51C1DDD309200058BFC /* ViewController.swift */,
-				1312C5431DDD915100058BFC /* FirstAidDetailViewController.swift */,
-				1312C53A1DDD67F600058BFC /* FirstAidViewController.swift */,
-				1312C53C1DDD6D6900058BFC /* FirstAidTableViewCell.swift */,
 				1312C51E1DDD309200058BFC /* Main.storyboard */,
 				1312C5211DDD309200058BFC /* Assets.xcassets */,
 				1312C5231DDD309200058BFC /* LaunchScreen.storyboard */,
@@ -117,6 +124,27 @@
 				1312C53F1DDD75E900058BFC /* FirstAidEntry.swift */,
 			);
 			name = DataModel;
+			sourceTree = "<group>";
+		};
+		139CC2BD1DDE469A00B9DFB6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1312C53C1DDD6D6900058BFC /* FirstAidTableViewCell.swift */,
+				139CC2BF1DDE46C700B9DFB6 /* ProfileDetailTableViewCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		139CC2BE1DDE46A500B9DFB6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1312C5431DDD915100058BFC /* FirstAidDetailViewController.swift */,
+				1312C5451DDE2FD700058BFC /* NearbyViewController.swift */,
+				1312C53A1DDD67F600058BFC /* FirstAidViewController.swift */,
+				139CC2B91DDE420D00B9DFB6 /* ProfileViewController.swift */,
+				139CC2BB1DDE421C00B9DFB6 /* ProfileDetailViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,11 +253,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				139CC2C01DDE46C700B9DFB6 /* ProfileDetailTableViewCell.swift in Sources */,
 				1312C51D1DDD309200058BFC /* ViewController.swift in Sources */,
+				139CC2BC1DDE421C00B9DFB6 /* ProfileDetailViewController.swift in Sources */,
 				1312C5401DDD75E900058BFC /* FirstAidEntry.swift in Sources */,
+				1312C5461DDE2FD700058BFC /* NearbyViewController.swift in Sources */,
 				1312C53B1DDD67F600058BFC /* FirstAidViewController.swift in Sources */,
 				1312C51B1DDD309200058BFC /* AppDelegate.swift in Sources */,
 				1312C53D1DDD6D6900058BFC /* FirstAidTableViewCell.swift in Sources */,
+				139CC2BA1DDE420D00B9DFB6 /* ProfileViewController.swift in Sources */,
 				1312C5441DDD915100058BFC /* FirstAidDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
