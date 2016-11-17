@@ -11,9 +11,15 @@ import UIKit
 class FirstAidViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var firstAidTableView: UITableView!
+    var firstAidArray : [FirstAidEntry] = [FirstAidEntry]()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        readFirstAidDataFromFile()
         firstAidTableView.delegate = self;
         firstAidTableView.dataSource = self;
         firstAidTableView.tableFooterView = UIView(frame: CGRect.zero)
@@ -26,11 +32,11 @@ class FirstAidViewController: UIViewController, UITableViewDelegate, UITableView
     
     // MARK: - UITableView Delegate & Datasource
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1;
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 21;
+        return firstAidArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -42,10 +48,22 @@ class FirstAidViewController: UIViewController, UITableViewDelegate, UITableView
         selectionView.backgroundColor = UIColor.black.withAlphaComponent(0.05)
         cell.selectedBackgroundView = selectionView
         
-        cell.FirstAidTableViewCellImageView.image = UIImage(named: "FirstAidTableViewCell_CPR")
-        cell.FirstAidTableViewCellLabel.text = "CPR"
+        let entry = firstAidArray[indexPath.row]
+        cell.FirstAidTableViewCellImageView.image = entry.firstAidThumbnail
+        cell.FirstAidTableViewCellLabel.text = entry.firstAidName
         
         return cell
+    }
+    
+    // MARK: - Initialize Data
+    func readFirstAidDataFromFile() {
+        if let path = Bundle.main.path(forResource: "FirstAidList", ofType: "plist") {
+            let dict = NSDictionary(contentsOfFile: path) as! [String: AnyObject]
+            for item in dict["FirstAidName"] as! [String] {
+                let entry = FirstAidEntry(name: item)
+                firstAidArray.append(entry)
+            }
+        }
     }
     
     /*
