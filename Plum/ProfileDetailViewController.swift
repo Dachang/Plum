@@ -14,11 +14,14 @@ class ProfileDetailViewController: UIViewController, UITableViewDelegate, UITabl
     @IBOutlet weak var rightBarButtonItem: UIBarButtonItem!
     
     @IBOutlet weak var profileDetailTableView: UITableView!
+    
+    var profileDetailTableViewCellTitles : [String] = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         profileDetailTableView.delegate = self
         profileDetailTableView.dataSource = self
-        // Do any additional setup after loading the view.
+        profileDetailTableViewCellTitles = ["Name","Date of Birth", "Gender", "Blood Type", "Height", "Weight", "Medical Conditions", "Allergies", "Medication"]
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,6 +31,7 @@ class ProfileDetailViewController: UIViewController, UITableViewDelegate, UITabl
     
     // MARK: - Target Actions
     @IBAction func leftBarButtonItemClicked(_ sender: UIBarButtonItem) {
+        self.view.endEditing(true)
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -82,11 +86,20 @@ class ProfileDetailViewController: UIViewController, UITableViewDelegate, UITabl
         selectionView.backgroundColor = UIColor.black.withAlphaComponent(0.05)
         cell.selectedBackgroundView = selectionView
         
+        cell.profileDetailTableViewCellTitle.text = profileDetailTableViewCellTitles[indexPath.row]
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! ProfileDetailTableViewCell
+        cell.profileDetailTableViewCellTextField.becomeFirstResponder()
+        tableView.scrollToRow(at: indexPath, at: .top, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        self.view.endEditing(true)
     }
 
     /*
