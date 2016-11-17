@@ -6,6 +6,25 @@
 	<array>
 		<string>CPR</string>
 		<string>Recovery Position</string>
+		<string>Asphyxia</string>
+		<string>Bleeding</string>
+		<string>Bone Fracture</string>
+		<string>Transfer the Wounded</string>
+		<string>Sprain</string>
+		<string>Stroke</string>
+		<string>Heart Attack</string>
+		<string>Shock</string>
+		<string>Asthma</string>
+		<string>Burn</string>
+		<string>Epilepsy</string>
+		<string>Drowning</string>
+		<string>Electric Shock</string>
+		<string>Carbon Monoxide Poisoning</string>
+		<string>Puncture Injury</string>
+		<string>Hyperthermia</string>
+		<string>Frostbite</string>
+		<string>Pet Attack</string>
+		<string>Snake Attack</string>
 	</array>
 </dict>
 </plist>
