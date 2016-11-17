@@ -13,6 +13,8 @@
 		1312C5221DDD309200058BFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1312C5211DDD309200058BFC /* Assets.xcassets */; };
 		1312C5251DDD309200058BFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1312C5231DDD309200058BFC /* LaunchScreen.storyboard */; };
 		1312C5301DDD309200058BFC /* PlumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1312C52F1DDD309200058BFC /* PlumTests.swift */; };
+		1312C53B1DDD67F600058BFC /* FirstAidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1312C53A1DDD67F600058BFC /* FirstAidViewController.swift */; };
+		1312C53D1DDD6D6900058BFC /* FirstAidTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1312C53C1DDD6D6900058BFC /* FirstAidTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		1312C52B1DDD309200058BFC /* PlumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1312C52F1DDD309200058BFC /* PlumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlumTests.swift; sourceTree = "<group>"; };
 		1312C5311DDD309200058BFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1312C53A1DDD67F600058BFC /* FirstAidViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstAidViewController.swift; sourceTree = "<group>"; };
+		1312C53C1DDD6D6900058BFC /* FirstAidTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstAidTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 			children = (
 				1312C51A1DDD309200058BFC /* AppDelegate.swift */,
 				1312C51C1DDD309200058BFC /* ViewController.swift */,
+				1312C53A1DDD67F600058BFC /* FirstAidViewController.swift */,
+				1312C53C1DDD6D6900058BFC /* FirstAidTableViewCell.swift */,
 				1312C51E1DDD309200058BFC /* Main.storyboard */,
 				1312C5211DDD309200058BFC /* Assets.xcassets */,
 				1312C5231DDD309200058BFC /* LaunchScreen.storyboard */,
@@ -202,7 +208,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1312C51D1DDD309200058BFC /* ViewController.swift in Sources */,
+				1312C53B1DDD67F600058BFC /* FirstAidViewController.swift in Sources */,
 				1312C51B1DDD309200058BFC /* AppDelegate.swift in Sources */,
+				1312C53D1DDD6D6900058BFC /* FirstAidTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +418,7 @@
 				1312C5361DDD309200058BFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1312C5371DDD309200058BFC /* Build configuration list for PBXNativeTarget "PlumTests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +427,7 @@
 				1312C5391DDD309200058BFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
