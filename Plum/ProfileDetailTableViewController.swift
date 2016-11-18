@@ -96,9 +96,7 @@ class ProfileDetailTableViewController: UITableViewController, UIPickerViewDeleg
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let profileDetailTableViewCellIdentifier = "profileDetailTableViewCell"
-        let cell = tableView.dequeueReusableCell(withIdentifier: profileDetailTableViewCellIdentifier, for: indexPath) as! ProfileDetailTableViewCell
-        
+        let cell = super.tableView(tableView, cellForRowAt: indexPath) as! ProfileDetailTableViewCell
         
         let selectionView : UIView = UIView(frame: cell.frame)
         selectionView.backgroundColor = UIColor.black.withAlphaComponent(0.05)
