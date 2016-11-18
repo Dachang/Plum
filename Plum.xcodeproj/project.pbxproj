@@ -22,6 +22,7 @@
 		139CC2BA1DDE420D00B9DFB6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139CC2B91DDE420D00B9DFB6 /* ProfileViewController.swift */; };
 		139CC2C01DDE46C700B9DFB6 /* ProfileDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139CC2BF1DDE46C700B9DFB6 /* ProfileDetailTableViewCell.swift */; };
 		139CC2C21DDE57A500B9DFB6 /* ProfileDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139CC2C11DDE57A500B9DFB6 /* ProfileDetailTableViewController.swift */; };
+		139CC2C41DDE5F1F00B9DFB6 /* ProfileEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139CC2C31DDE5F1F00B9DFB6 /* ProfileEntry.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		139CC2B91DDE420D00B9DFB6 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		139CC2BF1DDE46C700B9DFB6 /* ProfileDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileDetailTableViewCell.swift; sourceTree = "<group>"; };
 		139CC2C11DDE57A500B9DFB6 /* ProfileDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileDetailTableViewController.swift; sourceTree = "<group>"; };
+		139CC2C31DDE5F1F00B9DFB6 /* ProfileEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileEntry.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				1312C53F1DDD75E900058BFC /* FirstAidEntry.swift */,
+				139CC2C31DDE5F1F00B9DFB6 /* ProfileEntry.swift */,
 			);
 			name = DataModel;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				139CC2C41DDE5F1F00B9DFB6 /* ProfileEntry.swift in Sources */,
 				139CC2C01DDE46C700B9DFB6 /* ProfileDetailTableViewCell.swift in Sources */,
 				1312C51D1DDD309200058BFC /* ViewController.swift in Sources */,
 				1312C5401DDD75E900058BFC /* FirstAidEntry.swift in Sources */,

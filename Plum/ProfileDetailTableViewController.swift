@@ -8,27 +8,41 @@
 
 import UIKit
 
-class ProfileDetailTableViewController: UITableViewController {
+class ProfileDetailTableViewController: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
     @IBOutlet weak var leftBarButtonItem: UIBarButtonItem!
     @IBOutlet weak var rightBarButtonItem: UIBarButtonItem!
     
-    var profileDetailTableViewCellTitles : [String] = [String]()
+    var profileDetailTableViewCellTitles : [[String]] = []
+    
+    var profileDetailTableViewGenderTitles : [String] = [String]()
+    
+    var profileDetailTableViewBloodTypeTitles : [String] = [String]()
+    
+    var profileDetailTableViewHeightTitles : [[String]] = []
+    
+    var profileEntry : ProfileEntry!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        profileDetailTableViewCellTitles = ["Name","Date of Birth", "Gender", "Blood Type", "Height", "Weight", "Medical Conditions", "Allergies", "Medication"]
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        profileDetailTableViewCellTitles = [
+            ["Name"],
+            ["Date of Birth", "Gender", "Blood Type", "Height", "Weight"],
+            ["Medical Conditions", "Allergies", "Medication"]
+        ]
+        
+        profileDetailTableViewGenderTitles = ["Male", "Female", "Transexual", "Others"]
+        
+        profileDetailTableViewBloodTypeTitles = ["Unknown", "A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"]
+        
+        profileEntry = ProfileEntry(name: "", bir: "", gen: "",
+                                    blo: "", hei: "", wei: "",
+                                    medcon: "", allgy: "", medca: "")
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     // MARK: - Target Actions
@@ -45,12 +59,10 @@ class ProfileDetailTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 3
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         switch section {
         case 0:
             return 1
@@ -85,14 +97,46 @@ class ProfileDetailTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let profileDetailTableViewCellIdentifier = "profileDetailTableViewCell"
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: profileDetailTableViewCellIdentifier, for: indexPath) as! ProfileDetailTableViewCell
+        
         
         let selectionView : UIView = UIView(frame: cell.frame)
         selectionView.backgroundColor = UIColor.black.withAlphaComponent(0.05)
         cell.selectedBackgroundView = selectionView
         
-        cell.profileDetailTableViewCellTitle.text = profileDetailTableViewCellTitles[indexPath.row]
+        let profileDetailTableViewCellTextFieldLabels : [[String]] = [
+            [profileEntry.profileName],
+            [profileEntry.dateOfBirth, profileEntry.gender, profileEntry.bloodType, profileEntry.height, profileEntry.weight],
+            [profileEntry.medicalConditions, profileEntry.allergies, profileEntry.medication]
+        ]
+        
+        cell.profileDetailTableViewCellTitle.text = profileDetailTableViewCellTitles[indexPath.section][indexPath.row]
+        cell.profileDetailTableViewCellTextField.delegate = self
+        cell.profileDetailTableViewCellTextField.text = profileDetailTableViewCellTextFieldLabels[indexPath.section][indexPath.row]
+        cell.profileDetailTableViewCellTextField.tag = indexPath.section * 10 + indexPath.row
+        
+        if cell.profileDetailTableViewCellTitle.text == "Date of Birth" {
+            let datePicker : UIDatePicker = UIDatePicker()
+            datePicker.datePickerMode = .date
+            cell.profileDetailTableViewCellTextField.inputView = datePicker
+        }
+        
+        if indexPath.section == 1 {
+            switch indexPath.row {
+            case 1, 2, 3, 4:
+                let picker : UIPickerView = UIPickerView()
+                picker.delegate = self
+                picker.dataSource = self
+                picker.tag = indexPath.row
+                cell.profileDetailTableViewCellTextField.inputView = picker
+            default:
+                break;
+            }
+        } else if indexPath.section == 0 {
+            cell.profileDetailTableViewCellTextField.autocapitalizationType = .words
+        } else {
+            cell.profileDetailTableViewCellTextField.autocapitalizationType = .sentences
+        }
         
         return cell
     }
@@ -105,52 +149,71 @@ class ProfileDetailTableViewController: UITableViewController {
     
     override func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         self.view.endEditing(true)
+        self.tableView.reloadData()
     }
 
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    // MARK: - UIPickerView Delegate & Datasource
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        switch pickerView.tag {
+        case 0:
+            return 3
+        case 3:
+            return 2
+        default:
+            return 1
+        }
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        switch pickerView.tag {
+        case 1:
+            return profileDetailTableViewGenderTitles.count
+        case 2:
+            return profileDetailTableViewBloodTypeTitles.count
+        default:
+            return 0;
+        }
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        switch pickerView.tag {
+        case 1:
+            return profileDetailTableViewGenderTitles[row]
+        default:
+            return profileDetailTableViewBloodTypeTitles[row]
+        }
     }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        switch pickerView.tag {
+        case 1:
+            profileEntry.gender = profileDetailTableViewGenderTitles[row]
+        case 2:
+            profileEntry.bloodType = profileDetailTableViewBloodTypeTitles[row]
+        default:
+            break;
+        }
+        self.tableView.reloadData()
     }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    // MARK: - UITextFieldDelegate
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        switch textField.tag {
+        case 0:
+            profileEntry.profileName = textField.text!
+        case 20:
+            profileEntry.medicalConditions = textField.text!
+        case 21:
+            profileEntry.allergies = textField.text!
+        case 22:
+            profileEntry.medication = textField.text!
+        default:
+            break;
+        }
+        textField.resignFirstResponder()
     }
-    */
-
+    
+    // MARK: - Utils
+    func generateHeightLabels() {
+    }
 }

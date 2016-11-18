@@ -57,7 +57,7 @@
                                             <color key="textColor" red="1" green="0.2347312272" blue="0.31448560949999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Unknown" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="eSK-Au-CAw">
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Unknown" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eSK-Au-CAw">
                                             <rect key="frame" x="16" y="25" width="351" height="34"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
