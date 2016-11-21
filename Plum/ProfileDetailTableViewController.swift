@@ -19,7 +19,9 @@ class ProfileDetailTableViewController: UITableViewController, UIPickerViewDeleg
     
     var profileDetailTableViewBloodTypeTitles : [String] = [String]()
     
-    var profileDetailTableViewHeightTitles : [[String]] = []
+    var profileDetailTableViewHeightTitles : [String] = [String]()
+    
+    var profileDetailTableViewWeightTitles : [String] = [String]()
     
     var profileEntry : ProfileEntry!
 
@@ -39,6 +41,10 @@ class ProfileDetailTableViewController: UITableViewController, UIPickerViewDeleg
         profileEntry = ProfileEntry(name: "", bir: "", gen: "",
                                     blo: "", hei: "", wei: "",
                                     medcon: "", allgy: "", medca: "")
+        
+        generateHeightLabels()
+        
+        generateWeightLabel()
     }
 
     override func didReceiveMemoryWarning() {
@@ -155,8 +161,6 @@ class ProfileDetailTableViewController: UITableViewController, UIPickerViewDeleg
         switch pickerView.tag {
         case 0:
             return 3
-        case 3:
-            return 2
         default:
             return 1
         }
@@ -168,6 +172,10 @@ class ProfileDetailTableViewController: UITableViewController, UIPickerViewDeleg
             return profileDetailTableViewGenderTitles.count
         case 2:
             return profileDetailTableViewBloodTypeTitles.count
+        case 3:
+            return profileDetailTableViewHeightTitles.count
+        case 4:
+            return profileDetailTableViewWeightTitles.count
         default:
             return 0;
         }
@@ -177,6 +185,12 @@ class ProfileDetailTableViewController: UITableViewController, UIPickerViewDeleg
         switch pickerView.tag {
         case 1:
             return profileDetailTableViewGenderTitles[row]
+        case 2:
+            return profileDetailTableViewBloodTypeTitles[row]
+        case 3:
+            return profileDetailTableViewHeightTitles[row]
+        case 4:
+            return profileDetailTableViewWeightTitles[row]
         default:
             return profileDetailTableViewBloodTypeTitles[row]
         }
@@ -188,6 +202,10 @@ class ProfileDetailTableViewController: UITableViewController, UIPickerViewDeleg
             profileEntry.gender = profileDetailTableViewGenderTitles[row]
         case 2:
             profileEntry.bloodType = profileDetailTableViewBloodTypeTitles[row]
+        case 3:
+            profileEntry.height = profileDetailTableViewHeightTitles[row]
+        case 4:
+            profileEntry.weight = profileDetailTableViewWeightTitles[row]
         default:
             break;
         }
@@ -213,5 +231,21 @@ class ProfileDetailTableViewController: UITableViewController, UIPickerViewDeleg
     
     // MARK: - Utils
     func generateHeightLabels() {
+        var lhs_arg : [String] = [String]()
+        var rhs_arg : [String] = [String]()
+        
+        for i in 0...9 {
+            lhs_arg.append(String(i) + "'")
+            for j in 0...11 {
+                rhs_arg.append(String(j) + "''")
+                profileDetailTableViewHeightTitles.append(lhs_arg[i] + " " + rhs_arg[j])
+            }
+        }
+    }
+    
+    func generateWeightLabel() {
+        for i in 0...999 {
+            profileDetailTableViewWeightTitles.append(String(i)+" lb")
+        }
     }
 }
