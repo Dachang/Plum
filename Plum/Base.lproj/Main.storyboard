@@ -207,14 +207,6 @@
                             <constraint firstItem="vqS-wV-tek" firstAttribute="top" secondItem="uUL-KC-kNb" secondAttribute="bottom" constant="15" id="xWv-NK-KbW"/>
                             <constraint firstItem="sHB-Yk-iU3" firstAttribute="centerX" secondItem="aXA-5u-aFA" secondAttribute="centerX" id="y80-Kv-dDs"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="sHB-Yk-iU3"/>
-                                <exclude reference="uUL-KC-kNb"/>
-                                <exclude reference="vqS-wV-tek"/>
-                                <exclude reference="c18-jf-GXO"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="jUb-Dk-Lxs">
                         <barButtonItem key="rightBarButtonItem" title="Add" style="done" id="NgR-Il-plx">

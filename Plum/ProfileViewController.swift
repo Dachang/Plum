@@ -29,7 +29,21 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        profileListTableView.reloadData()
+        
+        if ProfileEntryArchive.healthProfiles.count == 0 {
+            profileListTableView.isHidden = true
+            profileEmptyIndicatorImage.isHidden = false
+            profileEmptyIndicatorTitle.isHidden = false
+            profileEmptyIndicatorSeparator.isHidden = false
+            profileEmptyIndicatorDescription.isHidden = false
+        } else {
+            profileEmptyIndicatorImage.isHidden = true
+            profileEmptyIndicatorTitle.isHidden = true
+            profileEmptyIndicatorSeparator.isHidden = true
+            profileEmptyIndicatorDescription.isHidden = true
+            profileListTableView.isHidden = false
+            profileListTableView.reloadData()
+        }
     }
 
     override func didReceiveMemoryWarning() {
