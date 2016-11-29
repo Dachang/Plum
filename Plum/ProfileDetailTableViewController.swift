@@ -55,11 +55,19 @@ class ProfileDetailTableViewController: UITableViewController, UIPickerViewDeleg
     
     @IBAction func leftBarButtonItemClicked(_ sender: UIBarButtonItem) {
         self.view.endEditing(true)
-        self.dismiss(animated: true, completion: nil)
+        if isProfileEntryNull() {
+            self.dismiss(animated: true, completion: nil)
+        } else {
+            presentCancelActionAlert()
+        }
     }
     @IBAction func rightBarButtonItemClicked(_ sender: UIBarButtonItem) {
         self.view.endEditing(true)
-        self.dismiss(animated: true, completion: nil)
+        if isProfileEntryValid() {
+            self.dismiss(animated: true, completion: nil)
+        } else {
+            presentValidActionAlert()
+        }
     }
 
     // MARK: - Table view data source
@@ -121,6 +129,7 @@ class ProfileDetailTableViewController: UITableViewController, UIPickerViewDeleg
         
         if cell.profileDetailTableViewCellTitle.text == "Date of Birth" {
             let datePicker : UIDatePicker = UIDatePicker()
+            datePicker.addTarget(self, action: #selector(handleDatePicker(sender:)), for: .valueChanged)
             datePicker.datePickerMode = .date
             cell.profileDetailTableViewCellTextField.inputView = datePicker
         }
@@ -247,5 +256,47 @@ class ProfileDetailTableViewController: UITableViewController, UIPickerViewDeleg
         for i in 0...999 {
             profileDetailTableViewWeightTitles.append(String(i)+" lb")
         }
+    }
+    
+    func isProfileEntryValid() -> Bool {
+        return profileEntry.profileName != "" ? true : false
+    }
+    
+    func isProfileEntryNull() -> Bool {
+        if profileEntry.profileName == "" &&
+            profileEntry.allergies == "" &&
+            profileEntry.bloodType == "" &&
+            profileEntry.dateOfBirth == "" &&
+            profileEntry.gender == "" &&
+            profileEntry.height == "" &&
+            profileEntry.medicalConditions == "" &&
+            profileEntry.medication == "" &&
+            profileEntry.weight == "" {
+            return true
+        }
+        return false
+    }
+    
+    func presentCancelActionAlert() {
+        let alert = UIAlertController(title: "Cancel Editing?", message: "Your information will be dismissed", preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Yes", style: .destructive, handler: { action in
+            self.dismiss(animated: true, completion: nil)
+        }))
+        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func presentValidActionAlert() {
+        let alert = UIAlertController(title: "Unable to Save", message: "You must input the name of this profile", preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "OK", style: .destructive, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    // MARK: - Target
+    func handleDatePicker(sender: UIDatePicker) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let strDate = dateFormatter.string(from: sender.date)
+        profileEntry.dateOfBirth = strDate
     }
 }
