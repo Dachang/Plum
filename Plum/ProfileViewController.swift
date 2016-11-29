@@ -45,8 +45,10 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         switch indexPath.row {
         case 0:
             return 128.0
-        case 1, 2, 3:
+        case 1, 2:
             return 64.0
+        case 3:
+            return 44.0
         default:
             return 44.0
         }
@@ -85,7 +87,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             cell.cellThumbnailCapLetter.text = "D"
             
             return cell
-        case 1, 2, 3:
+        case 1, 2:
             let profileListSectionCellIdentifier = "profileListSectionTableViewCell"
             
             let cell = tableView.dequeueReusableCell(withIdentifier: profileListSectionCellIdentifier, for: indexPath) as! ProfileListSectionTableViewCell
@@ -98,9 +100,23 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             cell.cellContent.text = indexPath.row == 1 ? "Male" : "O+"
             
             return cell
+        case 3:
+            let profileListButtonTableViewCellIdentifier = "profileListButtonTableViewCell"
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: profileListButtonTableViewCellIdentifier, for: indexPath) as! ProfileListButtonTableViewCell
+            
+            let selectionView : UIView = UIView(frame: cell.frame)
+            selectionView.backgroundColor = UIColor.black.withAlphaComponent(0)
+            cell.selectedBackgroundView = selectionView
+            
+            return cell
         default:
             return UITableViewCell()
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     /*
     // MARK: - Navigation

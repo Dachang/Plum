@@ -21,6 +21,7 @@
 		1312C5461DDE2FD700058BFC /* NearbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1312C5451DDE2FD700058BFC /* NearbyViewController.swift */; };
 		13570F681DEE253B008F6774 /* ProfileListBannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13570F671DEE253B008F6774 /* ProfileListBannerTableViewCell.swift */; };
 		13570F6A1DEE2C1E008F6774 /* ProfileListSectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13570F691DEE2C1E008F6774 /* ProfileListSectionTableViewCell.swift */; };
+		13570F6C1DEE2F87008F6774 /* ProfileListButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13570F6B1DEE2F87008F6774 /* ProfileListButtonTableViewCell.swift */; };
 		139CC2BA1DDE420D00B9DFB6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139CC2B91DDE420D00B9DFB6 /* ProfileViewController.swift */; };
 		139CC2C01DDE46C700B9DFB6 /* ProfileDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139CC2BF1DDE46C700B9DFB6 /* ProfileDetailTableViewCell.swift */; };
 		139CC2C21DDE57A500B9DFB6 /* ProfileDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139CC2C11DDE57A500B9DFB6 /* ProfileDetailTableViewController.swift */; };
@@ -85,6 +86,7 @@
 		1312C5451DDE2FD700058BFC /* NearbyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyViewController.swift; sourceTree = "<group>"; };
 		13570F671DEE253B008F6774 /* ProfileListBannerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileListBannerTableViewCell.swift; sourceTree = "<group>"; };
 		13570F691DEE2C1E008F6774 /* ProfileListSectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileListSectionTableViewCell.swift; sourceTree = "<group>"; };
+		13570F6B1DEE2F87008F6774 /* ProfileListButtonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileListButtonTableViewCell.swift; sourceTree = "<group>"; };
 		139CC2B91DDE420D00B9DFB6 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		139CC2BF1DDE46C700B9DFB6 /* ProfileDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileDetailTableViewCell.swift; sourceTree = "<group>"; };
 		139CC2C11DDE57A500B9DFB6 /* ProfileDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileDetailTableViewController.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				139CC2BF1DDE46C700B9DFB6 /* ProfileDetailTableViewCell.swift */,
 				13570F671DEE253B008F6774 /* ProfileListBannerTableViewCell.swift */,
 				13570F691DEE2C1E008F6774 /* ProfileListSectionTableViewCell.swift */,
+				13570F6B1DEE2F87008F6774 /* ProfileListButtonTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13570F6C1DEE2F87008F6774 /* ProfileListButtonTableViewCell.swift in Sources */,
 				13B3C9DD1DEE11940090491A /* SpringTextView.swift in Sources */,
 				13B3C9CC1DEE11940090491A /* DesignableTabBarController.swift in Sources */,
 				13570F681DEE253B008F6774 /* ProfileListBannerTableViewCell.swift in Sources */,
