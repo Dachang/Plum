@@ -27,7 +27,7 @@ class ProfileDetailTableViewController: UITableViewController, UIPickerViewDeleg
     
     var profileIsNew = true
     
-    var profileIsEditing = true
+    var profileIsEditing = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +49,14 @@ class ProfileDetailTableViewController: UITableViewController, UIPickerViewDeleg
         generateHeightLabels()
         
         generateWeightLabel()
+        
+        if profileIsEditing {
+            self.title = ProfileEntryArchive.healthProfiles[ProfileEntryArchive.currentProfileIndex].profileName
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+
     }
 
     override func didReceiveMemoryWarning() {

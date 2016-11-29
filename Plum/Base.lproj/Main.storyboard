@@ -129,7 +129,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nmg-Wa-jjH">
+                                                <button userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nmg-Wa-jjH">
                                                     <rect key="frame" x="16" y="6" width="95" height="30"/>
                                                     <state key="normal" title="Profile Details">
                                                         <color key="titleColor" red="1" green="0.2347312272" blue="0.31448560949999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -143,6 +143,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="cellButton" destination="nmg-Wa-jjH" id="Drv-jD-dKF"/>
+                                            <segue destination="iXN-cf-6Pi" kind="presentation" identifier="isEditingProfile" id="KO3-Fv-byR"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -151,10 +152,7 @@
                                 <rect key="frame" x="106" y="150.5" width="162" height="196"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="zoomIn"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="force">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="slideDown"/>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MANAGE YOUR HEALTH PROFILE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uUL-KC-kNb" customClass="SpringLabel" customModule="Plum" customModuleProvider="target">
@@ -212,7 +210,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Add" style="done" id="NgR-Il-plx">
                             <color key="tintColor" red="1" green="0.2347312272" blue="0.31448560949999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="iXN-cf-6Pi" kind="presentation" id="9eT-fq-wAp"/>
+                                <segue destination="iXN-cf-6Pi" kind="presentation" identifier="isAddingProfile" id="9eT-fq-wAp"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -922,4 +920,7 @@
         <image name="tarBarItemE" width="21" height="21"/>
         <image name="tarBarItemE_selected" width="21" height="21"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="9eT-fq-wAp"/>
+    </inferredMetricsTieBreakers>
 </document>
