@@ -88,6 +88,40 @@
                                             <outlet property="cellThumbnailCapLetter" destination="94t-yL-qi2" id="Sf1-61-836"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="profileListSectionTableViewCell" rowHeight="64" id="OaK-xk-ahF" customClass="ProfileListSectionTableViewCell" customModule="Plum" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="184" width="375" height="64"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OaK-xk-ahF" id="nwC-p2-sX0">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="63"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M27-Oq-trv">
+                                                    <rect key="frame" x="16" y="35" width="343" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLW-hI-3AX">
+                                                    <rect key="frame" x="16" y="10" width="343" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="1" green="0.2347312272" blue="0.31448560949999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="M27-Oq-trv" firstAttribute="top" secondItem="BLW-hI-3AX" secondAttribute="bottom" constant="8" id="Dru-HL-ddJ"/>
+                                                <constraint firstItem="BLW-hI-3AX" firstAttribute="top" secondItem="nwC-p2-sX0" secondAttribute="topMargin" constant="2" id="RKa-lL-MCP"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="M27-Oq-trv" secondAttribute="trailing" constant="8" id="RUf-Tu-VRU"/>
+                                                <constraint firstItem="M27-Oq-trv" firstAttribute="leading" secondItem="nwC-p2-sX0" secondAttribute="leadingMargin" constant="8" id="aq1-ge-cJl"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="BLW-hI-3AX" secondAttribute="trailing" constant="8" id="y5f-C5-cAm"/>
+                                                <constraint firstItem="BLW-hI-3AX" firstAttribute="leading" secondItem="nwC-p2-sX0" secondAttribute="leadingMargin" constant="8" id="zGS-b3-h7s"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cellContent" destination="M27-Oq-trv" id="b0G-aU-RQd"/>
+                                            <outlet property="cellTitle" destination="BLW-hI-3AX" id="jDM-qh-Epy"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_empty_indicator" translatesAutoresizingMaskIntoConstraints="NO" id="sHB-Yk-iU3" customClass="SpringImageView" customModule="Plum" customModuleProvider="target">

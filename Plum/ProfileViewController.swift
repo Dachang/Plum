@@ -42,7 +42,14 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 128.0
+        switch indexPath.row {
+        case 0:
+            return 128.0
+        case 1, 2, 3:
+            return 64.0
+        default:
+            return 44.0
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
@@ -62,20 +69,38 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let profileListBannerTableViewCellIdentifier = "profileListBannerTableViewCell"
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: profileListBannerTableViewCellIdentifier, for: indexPath) as! ProfileListBannerTableViewCell
-        
-        let selectionView : UIView = UIView(frame: cell.frame)
-        selectionView.backgroundColor = UIColor.black.withAlphaComponent(0.05)
-        cell.selectedBackgroundView = selectionView
-        
-        cell.cellProfileName.text = "Dachang Liu"
-        cell.cellDateOfBirthTitle.text = "Date of Birth"
-        cell.cellDateOfBirthContent.text = "1992-12-01"
-        cell.cellThumbnailCapLetter.text = "D"
-        
-        return cell
+        switch indexPath.row {
+        case 0:
+            let profileListBannerTableViewCellIdentifier = "profileListBannerTableViewCell"
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: profileListBannerTableViewCellIdentifier, for: indexPath) as! ProfileListBannerTableViewCell
+            
+            let selectionView : UIView = UIView(frame: cell.frame)
+            selectionView.backgroundColor = UIColor.black.withAlphaComponent(0.05)
+            cell.selectedBackgroundView = selectionView
+            
+            cell.cellProfileName.text = "Dachang Liu"
+            cell.cellDateOfBirthTitle.text = "Date of Birth"
+            cell.cellDateOfBirthContent.text = "1992-12-01"
+            cell.cellThumbnailCapLetter.text = "D"
+            
+            return cell
+        case 1, 2, 3:
+            let profileListSectionCellIdentifier = "profileListSectionTableViewCell"
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: profileListSectionCellIdentifier, for: indexPath) as! ProfileListSectionTableViewCell
+            
+            let selectionView : UIView = UIView(frame: cell.frame)
+            selectionView.backgroundColor = UIColor.black.withAlphaComponent(0.05)
+            cell.selectedBackgroundView = selectionView
+            
+            cell.cellTitle.text = indexPath.row == 1 ? "Gender" : "BloodType"
+            cell.cellContent.text = indexPath.row == 1 ? "Male" : "O+"
+            
+            return cell
+        default:
+            return UITableViewCell()
+        }
     }
     /*
     // MARK: - Navigation
