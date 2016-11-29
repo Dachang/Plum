@@ -26,6 +26,11 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         profileListTableView.dataSource = self
         profileListTableView.tableFooterView = UIView(frame: CGRect.zero)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        profileListTableView.reloadData()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -34,7 +39,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     // MARK: - UITableView Delegate & Datasource
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return ProfileEntryArchive.healthProfiles.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -81,10 +86,10 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             selectionView.backgroundColor = UIColor.black.withAlphaComponent(0.05)
             cell.selectedBackgroundView = selectionView
             
-            cell.cellProfileName.text = "Dachang Liu"
+            cell.cellProfileName.text = ProfileEntryArchive.healthProfiles[indexPath.section].profileName
             cell.cellDateOfBirthTitle.text = "Date of Birth"
-            cell.cellDateOfBirthContent.text = "1992-12-01"
-            cell.cellThumbnailCapLetter.text = "D"
+            cell.cellDateOfBirthContent.text = ProfileEntryArchive.healthProfiles[indexPath.section].dateOfBirth
+            cell.cellThumbnailCapLetter.text = ProfileEntryArchive.healthProfiles[indexPath.section].profileName[0]
             
             return cell
         case 1, 2:
@@ -97,7 +102,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             cell.selectedBackgroundView = selectionView
             
             cell.cellTitle.text = indexPath.row == 1 ? "Gender" : "BloodType"
-            cell.cellContent.text = indexPath.row == 1 ? "Male" : "O+"
+            cell.cellContent.text = indexPath.row == 1 ? ProfileEntryArchive.healthProfiles[indexPath.section].gender : ProfileEntryArchive.healthProfiles[indexPath.section].bloodType
             
             return cell
         case 3:
