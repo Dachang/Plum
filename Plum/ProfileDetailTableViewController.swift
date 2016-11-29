@@ -24,6 +24,10 @@ class ProfileDetailTableViewController: UITableViewController, UIPickerViewDeleg
     var profileDetailTableViewWeightTitles : [String] = [String]()
     
     var profileEntry : ProfileEntry!
+    
+    var profileIsNew = true
+    
+    var profileIsEditing = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,6 +68,9 @@ class ProfileDetailTableViewController: UITableViewController, UIPickerViewDeleg
     @IBAction func rightBarButtonItemClicked(_ sender: UIBarButtonItem) {
         self.view.endEditing(true)
         if isProfileEntryValid() {
+            if profileIsNew {
+                ProfileEntryArchive.healthProfiles.append(profileEntry)
+            }
             self.dismiss(animated: true, completion: nil)
         } else {
             presentValidActionAlert()

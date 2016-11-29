@@ -8,6 +8,11 @@
 
 import UIKit
 
+struct ProfileEntryArchive {
+    static var healthProfiles : [ProfileEntry] = [ProfileEntry]()
+    static var currentProfileIndex : Int = 0
+}
+
 class ProfileEntry: NSObject {
     
     var profileName : String
