@@ -147,7 +147,6 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             let profileDetailTableViewController = destinationViewController?.topViewController as? ProfileDetailTableViewController
             let currentIndex = (profileListTableView.indexPath(for: sender as! ProfileListButtonTableViewCell)?.section)!
             ProfileEntryArchive.currentProfileIndex = currentIndex
-            profileDetailTableViewController?.profileIsEditing = true
             profileDetailTableViewController?.profileIsNew = false
             print("isEditingProfile")
         } else {

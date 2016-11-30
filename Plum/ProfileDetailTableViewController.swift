@@ -28,31 +28,15 @@ class ProfileDetailTableViewController: UITableViewController, UIPickerViewDeleg
     var profileIsNew = true
     
     var profileIsEditing = false
+    
+    var currentEditingProfileEntry : ProfileEntry!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        profileDetailTableViewCellTitles = [
-            ["Name"],
-            ["Date of Birth", "Gender", "Blood Type", "Height", "Weight"],
-            ["Medical Conditions", "Allergies", "Medication"]
-        ]
+        generateData()
         
-        profileDetailTableViewGenderTitles = ["Male", "Female", "Transexual", "Others"]
-        
-        profileDetailTableViewBloodTypeTitles = ["Unknown", "A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"]
-        
-        profileEntry = ProfileEntry(name: "", bir: "", gen: "",
-                                    blo: "", hei: "", wei: "",
-                                    medcon: "", allgy: "", medca: "")
-        
-        generateHeightLabels()
-        
-        generateWeightLabel()
-        
-        if profileIsEditing {
-            self.title = ProfileEntryArchive.healthProfiles[ProfileEntryArchive.currentProfileIndex].profileName
-        }
+        checkProfileIsNew()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -67,6 +51,11 @@ class ProfileDetailTableViewController: UITableViewController, UIPickerViewDeleg
     
     @IBAction func leftBarButtonItemClicked(_ sender: UIBarButtonItem) {
         self.view.endEditing(true)
+        
+        if !profileIsNew {
+            
+        }
+        
         if isProfileEntryNull() {
             self.dismiss(animated: true, completion: nil)
         } else {
@@ -78,6 +67,10 @@ class ProfileDetailTableViewController: UITableViewController, UIPickerViewDeleg
         if isProfileEntryValid() {
             if profileIsNew {
                 ProfileEntryArchive.healthProfiles.append(profileEntry)
+            } else {
+                /*The following two lines can be removed, keep them for readability*/
+                ProfileEntryArchive.healthProfiles.remove(at: ProfileEntryArchive.currentProfileIndex)
+                ProfileEntryArchive.healthProfiles.insert(profileEntry, at: ProfileEntryArchive.currentProfileIndex)
             }
             self.dismiss(animated: true, completion: nil)
         } else {
@@ -131,7 +124,7 @@ class ProfileDetailTableViewController: UITableViewController, UIPickerViewDeleg
         selectionView.backgroundColor = UIColor.black.withAlphaComponent(0.05)
         cell.selectedBackgroundView = selectionView
         
-        let profileDetailTableViewCellTextFieldLabels : [[String]] = [
+        var profileDetailTableViewCellTextFieldLabels : [[String]] = [
             [profileEntry.profileName],
             [profileEntry.dateOfBirth, profileEntry.gender, profileEntry.bloodType, profileEntry.height, profileEntry.weight],
             [profileEntry.medicalConditions, profileEntry.allergies, profileEntry.medication]
@@ -305,6 +298,36 @@ class ProfileDetailTableViewController: UITableViewController, UIPickerViewDeleg
         let alert = UIAlertController(title: "Unable to Save", message: "You must input the name of this profile", preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "OK", style: .destructive, handler: nil))
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    func generateData() {
+        profileDetailTableViewCellTitles = [
+            ["Name"],
+            ["Date of Birth", "Gender", "Blood Type", "Height", "Weight"],
+            ["Medical Conditions", "Allergies", "Medication"]
+        ]
+        
+        profileDetailTableViewGenderTitles = ["Male", "Female", "Transexual", "Others"]
+        
+        profileDetailTableViewBloodTypeTitles = ["Unknown", "A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"]
+        
+        profileEntry = ProfileEntry(name: "", bir: "", gen: "",
+                                    blo: "", hei: "", wei: "",
+                                    medcon: "", allgy: "", medca: "")
+        
+        generateHeightLabels()
+        
+        generateWeightLabel()
+    }
+    
+    func checkProfileIsNew() {
+        if !profileIsNew {
+            currentEditingProfileEntry = ProfileEntryArchive.healthProfiles[ProfileEntryArchive.currentProfileIndex]
+            self.title = currentEditingProfileEntry.profileName
+            profileEntry = currentEditingProfileEntry
+            self.leftBarButtonItem.title = ""
+            self.leftBarButtonItem.isEnabled = false
+        }
     }
     
     // MARK: - Target
