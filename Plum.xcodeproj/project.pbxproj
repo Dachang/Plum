@@ -20,6 +20,7 @@
 		1312C5441DDD915100058BFC /* FirstAidDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1312C5431DDD915100058BFC /* FirstAidDetailViewController.swift */; };
 		1312C5461DDE2FD700058BFC /* NearbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1312C5451DDE2FD700058BFC /* NearbyViewController.swift */; };
 		134F5A2F1DEE7C6C00D38366 /* ProfileDetailDeleteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134F5A2E1DEE7C6C00D38366 /* ProfileDetailDeleteTableViewCell.swift */; };
+		134F5A321DEE823F00D38366 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 134F5A311DEE823F00D38366 /* MapKit.framework */; };
 		13570F681DEE253B008F6774 /* ProfileListBannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13570F671DEE253B008F6774 /* ProfileListBannerTableViewCell.swift */; };
 		13570F6A1DEE2C1E008F6774 /* ProfileListSectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13570F691DEE2C1E008F6774 /* ProfileListSectionTableViewCell.swift */; };
 		13570F6C1DEE2F87008F6774 /* ProfileListButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13570F6B1DEE2F87008F6774 /* ProfileListButtonTableViewCell.swift */; };
@@ -87,6 +88,7 @@
 		1312C5431DDD915100058BFC /* FirstAidDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstAidDetailViewController.swift; sourceTree = "<group>"; };
 		1312C5451DDE2FD700058BFC /* NearbyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyViewController.swift; sourceTree = "<group>"; };
 		134F5A2E1DEE7C6C00D38366 /* ProfileDetailDeleteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileDetailDeleteTableViewCell.swift; sourceTree = "<group>"; };
+		134F5A311DEE823F00D38366 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		13570F671DEE253B008F6774 /* ProfileListBannerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileListBannerTableViewCell.swift; sourceTree = "<group>"; };
 		13570F691DEE2C1E008F6774 /* ProfileListSectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileListSectionTableViewCell.swift; sourceTree = "<group>"; };
 		13570F6B1DEE2F87008F6774 /* ProfileListButtonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileListButtonTableViewCell.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				134F5A321DEE823F00D38366 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +154,7 @@
 				1312C5191DDD309200058BFC /* Plum */,
 				1312C52E1DDD309200058BFC /* PlumTests */,
 				1312C5181DDD309200058BFC /* Products */,
+				134F5A301DEE823F00D38366 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -198,6 +202,14 @@
 				139CC2C31DDE5F1F00B9DFB6 /* ProfileEntry.swift */,
 			);
 			name = DataModel;
+			sourceTree = "<group>";
+		};
+		134F5A301DEE823F00D38366 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				134F5A311DEE823F00D38366 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		13570F6D1DEE3418008F6774 /* Extensions */ = {
@@ -322,6 +334,11 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 6992736KPW;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					1312C52A1DDD309200058BFC = {
 						CreatedOnToolsVersion = 8.1;

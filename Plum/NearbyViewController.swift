@@ -7,21 +7,33 @@
 //
 
 import UIKit
+import MapKit
+import CoreLocation
 
-class NearbyViewController: UIViewController {
+class NearbyViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
+    @IBOutlet weak var nearbyMapView: MKMapView!
+    let locationManager = CLLocationManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.delegate = self
+        nearbyMapView.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    }
+
+    // MARK: - MKMapViewDelegate
+    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
+        let region = MKCoordinateRegionMakeWithDistance(
+            userLocation.location!.coordinate, 2000, 2000)
+        
+        mapView.setRegion(region, animated: true)
     }
     
-
     /*
     // MARK: - Navigation
 

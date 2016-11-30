@@ -628,7 +628,7 @@
         <!--Nearby-->
         <scene sceneID="4Fv-Xy-uU7">
             <objects>
-                <viewController title="Nearby" id="d3x-E9-nee" sceneMemberID="viewController">
+                <viewController title="Nearby" id="d3x-E9-nee" customClass="NearbyViewController" customModule="Plum" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iEe-D2-YGR"/>
                         <viewControllerLayoutGuide type="bottom" id="KYh-JP-Y4Z"/>
@@ -636,9 +636,23 @@
                     <view key="view" contentMode="scaleToFill" id="PoM-8d-2f1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h24-IS-xgj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="h24-IS-xgj" secondAttribute="trailing" id="0cW-OE-T6x"/>
+                            <constraint firstItem="h24-IS-xgj" firstAttribute="top" secondItem="PoM-8d-2f1" secondAttribute="top" id="8R8-pM-xfp"/>
+                            <constraint firstAttribute="bottom" secondItem="h24-IS-xgj" secondAttribute="bottom" id="W6h-fp-ORs"/>
+                            <constraint firstItem="h24-IS-xgj" firstAttribute="leading" secondItem="PoM-8d-2f1" secondAttribute="leading" id="lQY-hv-d4Q"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Nearby" id="jaA-jE-i9L"/>
+                    <connections>
+                        <outlet property="nearbyMapView" destination="h24-IS-xgj" id="Rr4-gW-sfg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lLh-U5-UzW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
