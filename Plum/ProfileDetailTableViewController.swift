@@ -77,7 +77,7 @@ class ProfileDetailTableViewController: UITableViewController, UIPickerViewDeleg
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return profileIsNew ? 3 : 4
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -88,13 +88,15 @@ class ProfileDetailTableViewController: UITableViewController, UIPickerViewDeleg
             return 5
         case 2:
             return 3
+        case 3:
+            return 1
         default:
             return 0
         }
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 64.0
+        return indexPath.section != 3 ? 64.0 : 44.0
     }
     
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
@@ -114,53 +116,73 @@ class ProfileDetailTableViewController: UITableViewController, UIPickerViewDeleg
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = super.tableView(tableView, cellForRowAt: indexPath) as! ProfileDetailTableViewCell
-        
-        let selectionView : UIView = UIView(frame: cell.frame)
-        selectionView.backgroundColor = UIColor.black.withAlphaComponent(0.05)
-        cell.selectedBackgroundView = selectionView
-        
-        var profileDetailTableViewCellTextFieldLabels : [[String]] = [
-            [profileEntry.profileName],
-            [profileEntry.dateOfBirth, profileEntry.gender, profileEntry.bloodType, profileEntry.height, profileEntry.weight],
-            [profileEntry.medicalConditions, profileEntry.allergies, profileEntry.medication]
-        ]
-        
-        cell.profileDetailTableViewCellTitle.text = profileDetailTableViewCellTitles[indexPath.section][indexPath.row]
-        cell.profileDetailTableViewCellTextField.delegate = self
-        cell.profileDetailTableViewCellTextField.text = profileDetailTableViewCellTextFieldLabels[indexPath.section][indexPath.row]
-        cell.profileDetailTableViewCellTextField.tag = indexPath.section * 10 + indexPath.row
-        
-        if cell.profileDetailTableViewCellTitle.text == "Date of Birth" {
-            let datePicker : UIDatePicker = UIDatePicker()
-            datePicker.addTarget(self, action: #selector(handleDatePicker(sender:)), for: .valueChanged)
-            datePicker.datePickerMode = .date
-            cell.profileDetailTableViewCellTextField.inputView = datePicker
-        }
-        
-        if indexPath.section == 1 {
-            switch indexPath.row {
-            case 1, 2, 3, 4:
-                let picker : UIPickerView = UIPickerView()
-                picker.delegate = self
-                picker.dataSource = self
-                picker.tag = indexPath.row
-                cell.profileDetailTableViewCellTextField.inputView = picker
-            default:
-                break;
+        switch indexPath.section {
+        case 0,1,2:
+            let cell = super.tableView(tableView, cellForRowAt: indexPath) as! ProfileDetailTableViewCell
+            
+            let selectionView : UIView = UIView(frame: cell.frame)
+            selectionView.backgroundColor = UIColor.black.withAlphaComponent(0.05)
+            cell.selectedBackgroundView = selectionView
+            
+            var profileDetailTableViewCellTextFieldLabels : [[String]] = [
+                [profileEntry.profileName],
+                [profileEntry.dateOfBirth, profileEntry.gender, profileEntry.bloodType, profileEntry.height, profileEntry.weight],
+                [profileEntry.medicalConditions, profileEntry.allergies, profileEntry.medication]
+            ]
+            
+            cell.profileDetailTableViewCellTitle.text = profileDetailTableViewCellTitles[indexPath.section][indexPath.row]
+            cell.profileDetailTableViewCellTextField.delegate = self
+            cell.profileDetailTableViewCellTextField.text = profileDetailTableViewCellTextFieldLabels[indexPath.section][indexPath.row]
+            cell.profileDetailTableViewCellTextField.tag = indexPath.section * 10 + indexPath.row
+            
+            if cell.profileDetailTableViewCellTitle.text == "Date of Birth" {
+                let datePicker : UIDatePicker = UIDatePicker()
+                datePicker.addTarget(self, action: #selector(handleDatePicker(sender:)), for: .valueChanged)
+                datePicker.datePickerMode = .date
+                cell.profileDetailTableViewCellTextField.inputView = datePicker
             }
-        } else if indexPath.section == 0 {
-            cell.profileDetailTableViewCellTextField.autocapitalizationType = .words
-        } else {
-            cell.profileDetailTableViewCellTextField.autocapitalizationType = .sentences
+            
+            if indexPath.section == 1 {
+                switch indexPath.row {
+                case 1, 2, 3, 4:
+                    let picker : UIPickerView = UIPickerView()
+                    picker.delegate = self
+                    picker.dataSource = self
+                    picker.tag = indexPath.row
+                    cell.profileDetailTableViewCellTextField.inputView = picker
+                default:
+                    break;
+                }
+            } else if indexPath.section == 0 {
+                cell.profileDetailTableViewCellTextField.autocapitalizationType = .words
+            } else {
+                cell.profileDetailTableViewCellTextField.autocapitalizationType = .sentences
+            }
+            
+            return cell
+        case 3:
+            let cell = super.tableView(tableView, cellForRowAt: indexPath) as! ProfileDetailDeleteTableViewCell
+            
+            let selectionView : UIView = UIView(frame: cell.frame)
+            selectionView.backgroundColor = UIColor.black.withAlphaComponent(0.05)
+            cell.selectedBackgroundView = selectionView
+            
+            return cell
+        default:
+            return UITableViewCell()
         }
-        
-        return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath) as! ProfileDetailTableViewCell
-        cell.profileDetailTableViewCellTextField.becomeFirstResponder()
+        switch indexPath.section {
+        case 0,1,2:
+            let cell = tableView.cellForRow(at: indexPath) as! ProfileDetailTableViewCell
+            cell.profileDetailTableViewCellTextField.becomeFirstResponder()
+        case 3:
+            presentConfirmDeleteActionAlert()
+        default:
+            break
+        }
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
@@ -293,6 +315,16 @@ class ProfileDetailTableViewController: UITableViewController, UIPickerViewDeleg
     func presentValidActionAlert() {
         let alert = UIAlertController(title: "Unable to Save", message: "You must input the name of this profile", preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "OK", style: .destructive, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func presentConfirmDeleteActionAlert() {
+        let alert = UIAlertController(title: "Delete This Profile?", message: "All information contained will be discarded", preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { action in
+            ProfileEntryArchive.healthProfiles.remove(at: ProfileEntryArchive.currentProfileIndex)
+            self.dismiss(animated: true, completion: nil)
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
     
