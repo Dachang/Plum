@@ -38,10 +38,6 @@ class ProfileDetailTableViewController: UITableViewController, UIPickerViewDeleg
         
         checkProfileIsNew()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
