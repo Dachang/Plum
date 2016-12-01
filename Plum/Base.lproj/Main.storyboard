@@ -188,6 +188,17 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_plum_indicator" translatesAutoresizingMaskIntoConstraints="NO" id="Crg-Q6-Wgn" customClass="SpringImageView" customModule="Plum" customModuleProvider="target">
+                                <rect key="frame" x="166" y="220" width="42" height="57"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="zoomIn"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autohide" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -197,12 +208,14 @@
                             <constraint firstItem="vqS-wV-tek" firstAttribute="centerX" secondItem="aXA-5u-aFA" secondAttribute="centerX" id="9sC-NG-XUw"/>
                             <constraint firstItem="c18-jf-GXO" firstAttribute="centerX" secondItem="aXA-5u-aFA" secondAttribute="centerX" id="Kjj-km-BQL"/>
                             <constraint firstItem="uUL-KC-kNb" firstAttribute="centerX" secondItem="aXA-5u-aFA" secondAttribute="centerX" id="MxW-9C-inr"/>
+                            <constraint firstItem="Crg-Q6-Wgn" firstAttribute="centerY" secondItem="sHB-Yk-iU3" secondAttribute="centerY" id="QTh-CB-hag"/>
                             <constraint firstAttribute="trailingMargin" secondItem="c18-jf-GXO" secondAttribute="trailing" constant="10" id="Uu2-xw-9cD"/>
                             <constraint firstItem="c18-jf-GXO" firstAttribute="top" secondItem="vqS-wV-tek" secondAttribute="bottom" constant="15" id="WG6-vM-xs7"/>
                             <constraint firstAttribute="trailing" secondItem="NpH-72-iTR" secondAttribute="trailing" id="XNB-Et-a4W"/>
                             <constraint firstItem="c18-jf-GXO" firstAttribute="leading" secondItem="aXA-5u-aFA" secondAttribute="leadingMargin" constant="10" id="gPm-7T-X7h"/>
                             <constraint firstItem="uUL-KC-kNb" firstAttribute="top" secondItem="sHB-Yk-iU3" secondAttribute="bottom" constant="25" id="hGh-K9-0hH"/>
                             <constraint firstItem="sHB-Yk-iU3" firstAttribute="centerY" secondItem="aXA-5u-aFA" secondAttribute="centerY" constant="-85" id="hqb-Jx-PV8"/>
+                            <constraint firstItem="Crg-Q6-Wgn" firstAttribute="centerX" secondItem="sHB-Yk-iU3" secondAttribute="centerX" id="pBp-0c-PaF"/>
                             <constraint firstItem="vqS-wV-tek" firstAttribute="top" secondItem="uUL-KC-kNb" secondAttribute="bottom" constant="15" id="xWv-NK-KbW"/>
                             <constraint firstItem="sHB-Yk-iU3" firstAttribute="centerX" secondItem="aXA-5u-aFA" secondAttribute="centerX" id="y80-Kv-dDs"/>
                         </constraints>
@@ -672,7 +685,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Emergency" id="pyS-n6-hDQ"/>
+                    <navigationItem key="navigationItem" title="Emergency" id="pyS-n6-hDQ">
+                        <barButtonItem key="rightBarButtonItem" title="Add" style="done" id="yVv-eh-2Dz">
+                            <color key="tintColor" red="1" green="0.2347312272" blue="0.31448560949999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LKq-eJ-rws" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -996,6 +1013,7 @@
         <image name="profileListBannerCellThumbnail" width="36" height="36"/>
         <image name="profile_empty_indicator" width="162" height="196"/>
         <image name="profile_empty_separator" width="252" height="2"/>
+        <image name="profile_plum_indicator" width="42" height="57"/>
         <image name="tabBarItemA" width="21" height="19"/>
         <image name="tabBarItemA_selected" width="21" height="19"/>
         <image name="tabBarItemB" width="19" height="24"/>
