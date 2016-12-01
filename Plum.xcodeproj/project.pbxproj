@@ -19,6 +19,19 @@
 		1312C5421DDD7AC000058BFC /* FirstAidList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1312C5411DDD7AC000058BFC /* FirstAidList.plist */; };
 		1312C5441DDD915100058BFC /* FirstAidDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1312C5431DDD915100058BFC /* FirstAidDetailViewController.swift */; };
 		1312C5461DDE2FD700058BFC /* NearbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1312C5451DDE2FD700058BFC /* NearbyViewController.swift */; };
+		1341176A1DEEC39B005CA7D2 /* RazzleDazzle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 134117691DEEC39B005CA7D2 /* RazzleDazzle.framework */; };
+		1341176D1DEEC4A3005CA7D2 /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1341176C1DEEC4A3005CA7D2 /* WalkthroughViewController.swift */; };
+		134117811DEF6365005CA7D2 /* FillAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134117701DEF6365005CA7D2 /* FillAnimationView.swift */; };
+		134117821DEF6365005CA7D2 /* GestureControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134117721DEF6365005CA7D2 /* GestureControl.swift */; };
+		134117831DEF6365005CA7D2 /* Configuring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134117741DEF6365005CA7D2 /* Configuring.swift */; };
+		134117841DEF6365005CA7D2 /* ConstraintsHalper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134117751DEF6365005CA7D2 /* ConstraintsHalper.swift */; };
+		134117851DEF6365005CA7D2 /* OnboardingContantViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134117781DEF6365005CA7D2 /* OnboardingContantViewItem.swift */; };
+		134117861DEF6365005CA7D2 /* OnboardingContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134117791DEF6365005CA7D2 /* OnboardingContentView.swift */; };
+		134117871DEF6365005CA7D2 /* PageViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1341177C1DEF6365005CA7D2 /* PageViewItem.swift */; };
+		134117881DEF6365005CA7D2 /* PageContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1341177E1DEF6365005CA7D2 /* PageContainer.swift */; };
+		134117891DEF6365005CA7D2 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1341177F1DEF6365005CA7D2 /* PageView.swift */; };
+		1341178A1DEF6365005CA7D2 /* PaperOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134117801DEF6365005CA7D2 /* PaperOnboarding.swift */; };
+		1341178C1DEF6556005CA7D2 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1341178B1DEF6556005CA7D2 /* Images.swift */; };
 		134F5A2F1DEE7C6C00D38366 /* ProfileDetailDeleteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134F5A2E1DEE7C6C00D38366 /* ProfileDetailDeleteTableViewCell.swift */; };
 		134F5A321DEE823F00D38366 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 134F5A311DEE823F00D38366 /* MapKit.framework */; };
 		13570F681DEE253B008F6774 /* ProfileListBannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13570F671DEE253B008F6774 /* ProfileListBannerTableViewCell.swift */; };
@@ -87,6 +100,19 @@
 		1312C5411DDD7AC000058BFC /* FirstAidList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FirstAidList.plist; sourceTree = "<group>"; };
 		1312C5431DDD915100058BFC /* FirstAidDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstAidDetailViewController.swift; sourceTree = "<group>"; };
 		1312C5451DDE2FD700058BFC /* NearbyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyViewController.swift; sourceTree = "<group>"; };
+		134117691DEEC39B005CA7D2 /* RazzleDazzle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RazzleDazzle.framework; path = Carthage/Build/iOS/RazzleDazzle.framework; sourceTree = "<group>"; };
+		1341176C1DEEC4A3005CA7D2 /* WalkthroughViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
+		134117701DEF6365005CA7D2 /* FillAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FillAnimationView.swift; sourceTree = "<group>"; };
+		134117721DEF6365005CA7D2 /* GestureControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureControl.swift; sourceTree = "<group>"; };
+		134117741DEF6365005CA7D2 /* Configuring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuring.swift; sourceTree = "<group>"; };
+		134117751DEF6365005CA7D2 /* ConstraintsHalper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintsHalper.swift; sourceTree = "<group>"; };
+		134117781DEF6365005CA7D2 /* OnboardingContantViewItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingContantViewItem.swift; sourceTree = "<group>"; };
+		134117791DEF6365005CA7D2 /* OnboardingContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingContentView.swift; sourceTree = "<group>"; };
+		1341177C1DEF6365005CA7D2 /* PageViewItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewItem.swift; sourceTree = "<group>"; };
+		1341177E1DEF6365005CA7D2 /* PageContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContainer.swift; sourceTree = "<group>"; };
+		1341177F1DEF6365005CA7D2 /* PageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
+		134117801DEF6365005CA7D2 /* PaperOnboarding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaperOnboarding.swift; sourceTree = "<group>"; };
+		1341178B1DEF6556005CA7D2 /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		134F5A2E1DEE7C6C00D38366 /* ProfileDetailDeleteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileDetailDeleteTableViewCell.swift; sourceTree = "<group>"; };
 		134F5A311DEE823F00D38366 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		13570F671DEE253B008F6774 /* ProfileListBannerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileListBannerTableViewCell.swift; sourceTree = "<group>"; };
@@ -135,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				134F5A321DEE823F00D38366 /* MapKit.framework in Frameworks */,
+				1341176A1DEEC39B005CA7D2 /* RazzleDazzle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,6 +197,7 @@
 		1312C5191DDD309200058BFC /* Plum */ = {
 			isa = PBXGroup;
 			children = (
+				1341176E1DEF6365005CA7D2 /* Ramotion */,
 				13570F6D1DEE3418008F6774 /* Extensions */,
 				13B3C9A61DEE11940090491A /* Spring */,
 				139CC2BE1DDE46A500B9DFB6 /* Controller */,
@@ -204,9 +232,92 @@
 			name = DataModel;
 			sourceTree = "<group>";
 		};
+		1341176E1DEF6365005CA7D2 /* Ramotion */ = {
+			isa = PBXGroup;
+			children = (
+				1341176F1DEF6365005CA7D2 /* FillAnimatinView */,
+				134117711DEF6365005CA7D2 /* GestureControl */,
+				134117731DEF6365005CA7D2 /* Helpers */,
+				134117761DEF6365005CA7D2 /* OnboardingContantView */,
+				1341177A1DEF6365005CA7D2 /* PageView */,
+				134117801DEF6365005CA7D2 /* PaperOnboarding.swift */,
+			);
+			name = Ramotion;
+			path = Source;
+			sourceTree = "<group>";
+		};
+		1341176F1DEF6365005CA7D2 /* FillAnimatinView */ = {
+			isa = PBXGroup;
+			children = (
+				134117701DEF6365005CA7D2 /* FillAnimationView.swift */,
+			);
+			path = FillAnimatinView;
+			sourceTree = "<group>";
+		};
+		134117711DEF6365005CA7D2 /* GestureControl */ = {
+			isa = PBXGroup;
+			children = (
+				134117721DEF6365005CA7D2 /* GestureControl.swift */,
+			);
+			path = GestureControl;
+			sourceTree = "<group>";
+		};
+		134117731DEF6365005CA7D2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				134117741DEF6365005CA7D2 /* Configuring.swift */,
+				134117751DEF6365005CA7D2 /* ConstraintsHalper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		134117761DEF6365005CA7D2 /* OnboardingContantView */ = {
+			isa = PBXGroup;
+			children = (
+				134117771DEF6365005CA7D2 /* Item */,
+				134117791DEF6365005CA7D2 /* OnboardingContentView.swift */,
+			);
+			path = OnboardingContantView;
+			sourceTree = "<group>";
+		};
+		134117771DEF6365005CA7D2 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				134117781DEF6365005CA7D2 /* OnboardingContantViewItem.swift */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
+		1341177A1DEF6365005CA7D2 /* PageView */ = {
+			isa = PBXGroup;
+			children = (
+				1341177B1DEF6365005CA7D2 /* Item */,
+				1341177D1DEF6365005CA7D2 /* PageContainerView */,
+				1341177F1DEF6365005CA7D2 /* PageView.swift */,
+			);
+			path = PageView;
+			sourceTree = "<group>";
+		};
+		1341177B1DEF6365005CA7D2 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				1341177C1DEF6365005CA7D2 /* PageViewItem.swift */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
+		1341177D1DEF6365005CA7D2 /* PageContainerView */ = {
+			isa = PBXGroup;
+			children = (
+				1341177E1DEF6365005CA7D2 /* PageContainer.swift */,
+			);
+			path = PageContainerView;
+			sourceTree = "<group>";
+		};
 		134F5A301DEE823F00D38366 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				134117691DEEC39B005CA7D2 /* RazzleDazzle.framework */,
 				134F5A311DEE823F00D38366 /* MapKit.framework */,
 			);
 			name = Frameworks;
@@ -215,6 +326,7 @@
 		13570F6D1DEE3418008F6774 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				1341178B1DEF6556005CA7D2 /* Images.swift */,
 				13570F6E1DEE3459008F6774 /* String+GetChar.swift */,
 			);
 			name = Extensions;
@@ -241,6 +353,7 @@
 				1312C53A1DDD67F600058BFC /* FirstAidViewController.swift */,
 				139CC2B91DDE420D00B9DFB6 /* ProfileViewController.swift */,
 				139CC2C11DDE57A500B9DFB6 /* ProfileDetailTableViewController.swift */,
+				1341176C1DEEC4A3005CA7D2 /* WalkthroughViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -292,6 +405,7 @@
 				1312C5131DDD309200058BFC /* Sources */,
 				1312C5141DDD309200058BFC /* Frameworks */,
 				1312C5151DDD309200058BFC /* Resources */,
+				1341176B1DEEC3AB005CA7D2 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -390,6 +504,23 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1341176B1DEEC3AB005CA7D2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RazzleDazzle.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1312C5131DDD309200058BFC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -400,8 +531,11 @@
 				13B3C9CC1DEE11940090491A /* DesignableTabBarController.swift in Sources */,
 				13570F681DEE253B008F6774 /* ProfileListBannerTableViewCell.swift in Sources */,
 				13B3C9C61DEE11940090491A /* AsyncImageView.swift in Sources */,
+				1341178A1DEF6365005CA7D2 /* PaperOnboarding.swift in Sources */,
 				139CC2C41DDE5F1F00B9DFB6 /* ProfileEntry.swift in Sources */,
+				134117841DEF6365005CA7D2 /* ConstraintsHalper.swift in Sources */,
 				13B3C9CE1DEE11940090491A /* DesignableTextView.swift in Sources */,
+				134117821DEF6365005CA7D2 /* GestureControl.swift in Sources */,
 				13B3C9C81DEE11940090491A /* BlurView.swift in Sources */,
 				13B3C9D51DEE11940090491A /* Misc.swift in Sources */,
 				13B3C9D71DEE11940090491A /* Spring.swift in Sources */,
@@ -416,6 +550,7 @@
 				1312C5401DDD75E900058BFC /* FirstAidEntry.swift in Sources */,
 				1312C5461DDE2FD700058BFC /* NearbyViewController.swift in Sources */,
 				1312C53B1DDD67F600058BFC /* FirstAidViewController.swift in Sources */,
+				1341176D1DEEC4A3005CA7D2 /* WalkthroughViewController.swift in Sources */,
 				13B3C9CA1DEE11940090491A /* DesignableImageView.swift in Sources */,
 				1312C51B1DDD309200058BFC /* AppDelegate.swift in Sources */,
 				13B3C9CF1DEE11940090491A /* DesignableView.swift in Sources */,
@@ -429,15 +564,23 @@
 				13B3C9DA1DEE11940090491A /* SpringImageView.swift in Sources */,
 				13B3C9C91DEE11940090491A /* DesignableButton.swift in Sources */,
 				13570F6F1DEE3459008F6774 /* String+GetChar.swift in Sources */,
+				134117871DEF6365005CA7D2 /* PageViewItem.swift in Sources */,
 				13B3C9C71DEE11940090491A /* AutoTextView.swift in Sources */,
 				13B3C9D61DEE11940090491A /* SoundPlayer.swift in Sources */,
 				134F5A2F1DEE7C6C00D38366 /* ProfileDetailDeleteTableViewCell.swift in Sources */,
+				134117831DEF6365005CA7D2 /* Configuring.swift in Sources */,
 				1312C53D1DDD6D6900058BFC /* FirstAidTableViewCell.swift in Sources */,
+				134117891DEF6365005CA7D2 /* PageView.swift in Sources */,
 				139CC2BA1DDE420D00B9DFB6 /* ProfileViewController.swift in Sources */,
+				134117851DEF6365005CA7D2 /* OnboardingContantViewItem.swift in Sources */,
+				1341178C1DEF6556005CA7D2 /* Images.swift in Sources */,
+				134117811DEF6365005CA7D2 /* FillAnimationView.swift in Sources */,
+				134117881DEF6365005CA7D2 /* PageContainer.swift in Sources */,
 				13B3C9CB1DEE11940090491A /* DesignableLabel.swift in Sources */,
 				13B3C9DC1DEE11940090491A /* SpringTextField.swift in Sources */,
 				1312C5441DDD915100058BFC /* FirstAidDetailViewController.swift in Sources */,
 				13B3C9DB1DEE11940090491A /* SpringLabel.swift in Sources */,
+				134117861DEF6365005CA7D2 /* OnboardingContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,6 +718,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6992736KPW;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Plum/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.OceanDev.Plum;
@@ -588,6 +735,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6992736KPW;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Plum/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.OceanDev.Plum;

@@ -16,7 +16,7 @@ class FirstAidViewController: UIViewController, UITableViewDelegate, UITableView
     var noteEditingViewController : FirstAidDetailViewController?
     
     override func viewWillAppear(_ animated: Bool) {
-        
+        UIApplication.shared.setStatusBarStyle(.default, animated: true)
     }
     
     override func viewDidLoad() {
