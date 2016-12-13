@@ -814,14 +814,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Symptom_Icon" translatesAutoresizingMaskIntoConstraints="NO" id="Sfp-74-5vP">
-                                                    <rect key="frame" x="16" y="10" width="29" height="29"/>
+                                                    <rect key="frame" x="18" y="12" width="29" height="29"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="29" id="Pbv-Jn-Eo2"/>
                                                         <constraint firstAttribute="width" constant="29" id="uLl-Pa-2vc"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Symptom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydu-pC-8Tf">
-                                                    <rect key="frame" x="53" y="14" width="306" height="21"/>
+                                                    <rect key="frame" x="55" y="14" width="304" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -838,14 +838,14 @@
                                                 </textView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Sfp-74-5vP" firstAttribute="top" secondItem="gta-Xm-zr5" secondAttribute="topMargin" constant="2" id="0KV-1N-IbM"/>
+                                                <constraint firstItem="Sfp-74-5vP" firstAttribute="top" secondItem="gta-Xm-zr5" secondAttribute="topMargin" constant="4" id="0KV-1N-IbM"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="ydu-pC-8Tf" secondAttribute="trailing" constant="8" id="8e5-nx-b7b"/>
                                                 <constraint firstItem="ydu-pC-8Tf" firstAttribute="leading" secondItem="Sfp-74-5vP" secondAttribute="trailing" constant="8" id="AIf-Qz-xs6"/>
-                                                <constraint firstItem="Sfp-74-5vP" firstAttribute="leading" secondItem="gta-Xm-zr5" secondAttribute="leadingMargin" constant="8" id="E6T-i2-ngi"/>
+                                                <constraint firstItem="Sfp-74-5vP" firstAttribute="leading" secondItem="gta-Xm-zr5" secondAttribute="leadingMargin" constant="10" id="E6T-i2-ngi"/>
                                                 <constraint firstItem="ydu-pC-8Tf" firstAttribute="top" secondItem="gta-Xm-zr5" secondAttribute="topMargin" constant="6" id="GH2-d8-zjg"/>
                                                 <constraint firstItem="PzE-UV-xCz" firstAttribute="leading" secondItem="gta-Xm-zr5" secondAttribute="leadingMargin" constant="8" id="KjS-hX-Khd"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="PzE-UV-xCz" secondAttribute="trailing" constant="8" id="NXo-Ns-hAc"/>
-                                                <constraint firstItem="PzE-UV-xCz" firstAttribute="top" secondItem="Sfp-74-5vP" secondAttribute="bottom" constant="8" id="VqR-qO-r0c"/>
+                                                <constraint firstItem="PzE-UV-xCz" firstAttribute="top" secondItem="Sfp-74-5vP" secondAttribute="bottom" constant="6" id="VqR-qO-r0c"/>
                                                 <constraint firstItem="PzE-UV-xCz" firstAttribute="bottom" secondItem="gta-Xm-zr5" secondAttribute="bottomMargin" id="r2k-hK-KBT"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -854,6 +854,36 @@
                                             <outlet property="symptomLabel" destination="ydu-pC-8Tf" id="iZf-p7-XhB"/>
                                             <outlet property="symptomTextViewHeight" destination="QwW-ZG-the" id="zib-UW-9H8"/>
                                             <outlet property="symtomTextView" destination="PzE-UV-xCz" id="Yat-ea-TmI"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FirstAidSymptomBulletinCell" rowHeight="78" id="L9R-hK-WjI" customClass="FirstAidSymptomBulletinTableViewCell" customModule="Plum" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="172" width="375" height="78"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="L9R-hK-WjI" id="YDz-uj-PKO">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="77"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Wounds may have congestion, swelling and pain. Severe fractures may cause limb deformities, or open wounds." translatesAutoresizingMaskIntoConstraints="NO" id="LS3-Dk-hlc">
+                                                    <rect key="frame" x="16" y="8" width="343" height="60"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="cfR-24-7Nl"/>
+                                                    </constraints>
+                                                    <color key="textColor" red="0.62865918870000004" green="0.62469118830000003" blue="0.64727097749999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="LS3-Dk-hlc" firstAttribute="leading" secondItem="YDz-uj-PKO" secondAttribute="leadingMargin" constant="8" id="1c7-O9-foy"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="LS3-Dk-hlc" secondAttribute="bottom" constant="1" id="WFb-6b-eaU"/>
+                                                <constraint firstItem="LS3-Dk-hlc" firstAttribute="top" secondItem="YDz-uj-PKO" secondAttribute="topMargin" id="Xib-ZK-qHB"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="LS3-Dk-hlc" secondAttribute="trailing" constant="8" id="aOO-rN-2et"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="textView" destination="LS3-Dk-hlc" id="hXx-YI-16U"/>
+                                            <outlet property="textViewHeight" destination="cfR-24-7Nl" id="3rd-lv-3Wc"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

@@ -12,12 +12,19 @@ class FirstAidDetailViewController: UIViewController, UITableViewDelegate, UITab
 
     @IBOutlet weak var firstAidDetailTableView: UITableView!
     
+    var sectionIconArray : [String] = [String]()
+    var sectionNameArray : [String] = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         firstAidDetailTableView.delegate = self
         firstAidDetailTableView.dataSource = self
         firstAidDetailTableView.estimatedRowHeight = 116.0
         firstAidDetailTableView.rowHeight = UITableViewAutomaticDimension
+        firstAidDetailTableView.reloadData()
+        
+        sectionIconArray = ["Symptom_Icon", "FirstAidMethod_Icon", "Cautions_Icon"]
+        sectionNameArray = ["Symptom", "First Aid Method", "Cautions"]
     }
 
     override func didReceiveMemoryWarning() {
@@ -63,21 +70,41 @@ class FirstAidDetailViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let firstAidSymptomCellIdentifier = "FirstAidSymptomCell"
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: firstAidSymptomCellIdentifier, for: indexPath) as! FirstAidSymptomTableViewCell
-        
-        cell.symtomTextView.text = "Wounds may have congestion, swelling and pain. Severe fractures may cause limb deformities, or open wounds."
-        
-        let sizeThatFitsTextView : CGSize = cell.symtomTextView.sizeThatFits(CGSize(width: cell.symtomTextView.frame.size.width, height: CGFloat(MAXFLOAT)))
-        cell.symptomTextViewHeight.constant = sizeThatFitsTextView.height
-        cell.layoutSubviews()
-        
-        let selectionView : UIView = UIView(frame: cell.frame)
-        selectionView.backgroundColor = UIColor.black.withAlphaComponent(0)
-        cell.selectedBackgroundView = selectionView
-        
-        return cell
+        if indexPath.row == 0 {
+            let firstAidSymptomCellIdentifier = "FirstAidSymptomCell"
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: firstAidSymptomCellIdentifier, for: indexPath) as! FirstAidSymptomTableViewCell
+            
+            cell.symtomTextView.text = "Wounds may have congestion, swelling and pain. Severe fractures may cause limb deformities, or open wounds."
+            cell.symptomIconImage.image = UIImage(named: sectionIconArray[indexPath.section])
+            cell.symptomLabel.text = sectionNameArray[indexPath.section]
+            
+            let sizeThatFitsTextView : CGSize = cell.symtomTextView.sizeThatFits(CGSize(width: cell.symtomTextView.frame.size.width, height: CGFloat(MAXFLOAT)))
+            cell.symptomTextViewHeight.constant = sizeThatFitsTextView.height
+            cell.layoutSubviews()
+            
+            let selectionView : UIView = UIView(frame: cell.frame)
+            selectionView.backgroundColor = UIColor.black.withAlphaComponent(0)
+            cell.selectedBackgroundView = selectionView
+            
+            return cell
+        } else {
+            let firstAidSymptomBulletinCellIdentifier = "FirstAidSymptomBulletinCell"
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: firstAidSymptomBulletinCellIdentifier, for: indexPath) as! FirstAidSymptomBulletinTableViewCell
+            
+            cell.textView.text = "Wounds may have congestion, swelling and pain. Severe fractures may cause limb deformities, or open wounds."
+            
+            let sizeThatFitsTextView : CGSize = cell.textView.sizeThatFits(CGSize(width: cell.textView.frame.size.width, height: CGFloat(MAXFLOAT)))
+            cell.textViewHeight.constant = sizeThatFitsTextView.height
+            cell.layoutSubviews()
+            
+            let selectionView : UIView = UIView(frame: cell.frame)
+            selectionView.backgroundColor = UIColor.black.withAlphaComponent(0)
+            cell.selectedBackgroundView = selectionView
+            
+            return cell
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
