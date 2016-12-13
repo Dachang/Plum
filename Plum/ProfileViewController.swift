@@ -12,6 +12,8 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     @IBOutlet weak var profileEmptyIndicatorImage: SpringImageView!
     
+    @IBOutlet weak var profileEmptyIndicatorLogoImage: SpringImageView!
+    
     @IBOutlet weak var profileEmptyIndicatorTitle: SpringLabel!
     
     @IBOutlet weak var profileEmptyIndicatorSeparator: UIImageView!
@@ -33,11 +35,13 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         if ProfileEntryArchive.healthProfiles.count == 0 {
             profileListTableView.isHidden = true
             profileEmptyIndicatorImage.isHidden = false
+            profileEmptyIndicatorLogoImage.isHidden = false
             profileEmptyIndicatorTitle.isHidden = false
             profileEmptyIndicatorSeparator.isHidden = false
             profileEmptyIndicatorDescription.isHidden = false
         } else {
             profileEmptyIndicatorImage.isHidden = true
+            profileEmptyIndicatorLogoImage.isHidden = true
             profileEmptyIndicatorTitle.isHidden = true
             profileEmptyIndicatorSeparator.isHidden = true
             profileEmptyIndicatorDescription.isHidden = true

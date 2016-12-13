@@ -194,7 +194,7 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="animation" value="zoomIn"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="delay">
-                                        <real key="value" value="0.5"/>
+                                        <real key="value" value="0.29999999999999999"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="autohide" value="YES"/>
                                 </userDefinedRuntimeAttributes>
@@ -231,6 +231,7 @@
                     <connections>
                         <outlet property="profileEmptyIndicatorDescription" destination="c18-jf-GXO" id="8H8-Ch-m1T"/>
                         <outlet property="profileEmptyIndicatorImage" destination="sHB-Yk-iU3" id="3uA-fX-6CZ"/>
+                        <outlet property="profileEmptyIndicatorLogoImage" destination="Crg-Q6-Wgn" id="lz0-UM-Pqb"/>
                         <outlet property="profileEmptyIndicatorSeparator" destination="vqS-wV-tek" id="hBo-gs-aBv"/>
                         <outlet property="profileEmptyIndicatorTitle" destination="uUL-KC-kNb" id="gxj-WM-Jrp"/>
                         <outlet property="profileListTableView" destination="NpH-72-iTR" id="BiB-mB-IzZ"/>
@@ -800,13 +801,80 @@
                     <view key="view" contentMode="scaleToFill" id="wAu-Mx-cU7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Xm6-H1-toc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FirstAidSymptomCell" rowHeight="116" id="XEC-jB-ztW" customClass="FirstAidSymptomTableViewCell" customModule="Plum" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="56" width="375" height="116"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XEC-jB-ztW" id="gta-Xm-zr5">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="115"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Symptom_Icon" translatesAutoresizingMaskIntoConstraints="NO" id="Sfp-74-5vP">
+                                                    <rect key="frame" x="16" y="10" width="29" height="29"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="29" id="Pbv-Jn-Eo2"/>
+                                                        <constraint firstAttribute="width" constant="29" id="uLl-Pa-2vc"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Symptom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydu-pC-8Tf">
+                                                    <rect key="frame" x="53" y="14" width="306" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Wounds may have congestion, swelling and pain. Severe fractures may cause limb deformities, or open wounds." translatesAutoresizingMaskIntoConstraints="NO" id="PzE-UV-xCz">
+                                                    <rect key="frame" x="16" y="47" width="343" height="60"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="QwW-ZG-the"/>
+                                                    </constraints>
+                                                    <color key="textColor" red="0.62865918874740601" green="0.6246911883354187" blue="0.64727097749710083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Sfp-74-5vP" firstAttribute="top" secondItem="gta-Xm-zr5" secondAttribute="topMargin" constant="2" id="0KV-1N-IbM"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ydu-pC-8Tf" secondAttribute="trailing" constant="8" id="8e5-nx-b7b"/>
+                                                <constraint firstItem="ydu-pC-8Tf" firstAttribute="leading" secondItem="Sfp-74-5vP" secondAttribute="trailing" constant="8" id="AIf-Qz-xs6"/>
+                                                <constraint firstItem="Sfp-74-5vP" firstAttribute="leading" secondItem="gta-Xm-zr5" secondAttribute="leadingMargin" constant="8" id="E6T-i2-ngi"/>
+                                                <constraint firstItem="ydu-pC-8Tf" firstAttribute="top" secondItem="gta-Xm-zr5" secondAttribute="topMargin" constant="6" id="GH2-d8-zjg"/>
+                                                <constraint firstItem="PzE-UV-xCz" firstAttribute="leading" secondItem="gta-Xm-zr5" secondAttribute="leadingMargin" constant="8" id="KjS-hX-Khd"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="PzE-UV-xCz" secondAttribute="trailing" constant="8" id="NXo-Ns-hAc"/>
+                                                <constraint firstItem="PzE-UV-xCz" firstAttribute="top" secondItem="Sfp-74-5vP" secondAttribute="bottom" constant="8" id="VqR-qO-r0c"/>
+                                                <constraint firstItem="PzE-UV-xCz" firstAttribute="bottom" secondItem="gta-Xm-zr5" secondAttribute="bottomMargin" id="r2k-hK-KBT"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="symptomIconImage" destination="Sfp-74-5vP" id="kd4-GU-01U"/>
+                                            <outlet property="symptomLabel" destination="ydu-pC-8Tf" id="iZf-p7-XhB"/>
+                                            <outlet property="symptomTextViewHeight" destination="QwW-ZG-the" id="zib-UW-9H8"/>
+                                            <outlet property="symtomTextView" destination="PzE-UV-xCz" id="Yat-ea-TmI"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="1" green="0.2347312272" blue="0.31448560949999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Xm6-H1-toc" firstAttribute="leading" secondItem="wAu-Mx-cU7" secondAttribute="leading" id="5bn-yF-MEw"/>
+                            <constraint firstAttribute="trailing" secondItem="Xm6-H1-toc" secondAttribute="trailing" id="Fcq-ut-E3h"/>
+                            <constraint firstItem="Xm6-H1-toc" firstAttribute="top" secondItem="wAu-Mx-cU7" secondAttribute="top" id="GWf-h7-ljX"/>
+                            <constraint firstAttribute="bottom" secondItem="Xm6-H1-toc" secondAttribute="bottom" id="vPe-Y3-hqh"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="firstAidDetailTableView" destination="Xm6-H1-toc" id="lEA-0P-Qh1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qhs-iz-e9D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2673" y="-180"/>
+            <point key="canvasLocation" x="2672.8000000000002" y="-180.35982008995504"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="mpR-qD-XaS">
@@ -838,7 +906,7 @@
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-2"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="dBX-YH-5yx">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dBX-YH-5yx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -859,7 +927,7 @@
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-2"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="bPm-Ba-DNK">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bPm-Ba-DNK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -880,7 +948,7 @@
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-2"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="fKt-54-q1q">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fKt-54-q1q">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -954,7 +1022,7 @@
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-2"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="x8i-px-2ds">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="x8i-px-2ds">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -972,7 +1040,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iXN-cf-6Pi" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Xj1-cy-eu2">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xj1-cy-eu2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -993,7 +1061,7 @@
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-2"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="8Bm-i2-JlP">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8Bm-i2-JlP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1009,6 +1077,7 @@
     </scenes>
     <resources>
         <image name="FirstAidTableViewCell_CPR" width="29" height="29"/>
+        <image name="Symptom_Icon" width="29" height="29"/>
         <image name="Walkthrough_End_Button" width="355" height="57"/>
         <image name="profileListBannerCellThumbnail" width="36" height="36"/>
         <image name="profile_empty_indicator" width="162" height="196"/>

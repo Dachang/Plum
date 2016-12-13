@@ -34,6 +34,7 @@
 		1341178C1DEF6556005CA7D2 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1341178B1DEF6556005CA7D2 /* Images.swift */; };
 		134F5A2F1DEE7C6C00D38366 /* ProfileDetailDeleteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134F5A2E1DEE7C6C00D38366 /* ProfileDetailDeleteTableViewCell.swift */; };
 		134F5A321DEE823F00D38366 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 134F5A311DEE823F00D38366 /* MapKit.framework */; };
+		1356413B1DF9EFE400BC3CC7 /* FirstAidSymptomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1356413A1DF9EFE400BC3CC7 /* FirstAidSymptomTableViewCell.swift */; };
 		13570F681DEE253B008F6774 /* ProfileListBannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13570F671DEE253B008F6774 /* ProfileListBannerTableViewCell.swift */; };
 		13570F6A1DEE2C1E008F6774 /* ProfileListSectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13570F691DEE2C1E008F6774 /* ProfileListSectionTableViewCell.swift */; };
 		13570F6C1DEE2F87008F6774 /* ProfileListButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13570F6B1DEE2F87008F6774 /* ProfileListButtonTableViewCell.swift */; };
@@ -115,6 +116,7 @@
 		1341178B1DEF6556005CA7D2 /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		134F5A2E1DEE7C6C00D38366 /* ProfileDetailDeleteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileDetailDeleteTableViewCell.swift; sourceTree = "<group>"; };
 		134F5A311DEE823F00D38366 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		1356413A1DF9EFE400BC3CC7 /* FirstAidSymptomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstAidSymptomTableViewCell.swift; sourceTree = "<group>"; };
 		13570F671DEE253B008F6774 /* ProfileListBannerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileListBannerTableViewCell.swift; sourceTree = "<group>"; };
 		13570F691DEE2C1E008F6774 /* ProfileListSectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileListSectionTableViewCell.swift; sourceTree = "<group>"; };
 		13570F6B1DEE2F87008F6774 /* ProfileListButtonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileListButtonTableViewCell.swift; sourceTree = "<group>"; };
@@ -341,6 +343,7 @@
 				13570F691DEE2C1E008F6774 /* ProfileListSectionTableViewCell.swift */,
 				13570F6B1DEE2F87008F6774 /* ProfileListButtonTableViewCell.swift */,
 				134F5A2E1DEE7C6C00D38366 /* ProfileDetailDeleteTableViewCell.swift */,
+				1356413A1DF9EFE400BC3CC7 /* FirstAidSymptomTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -537,6 +540,7 @@
 				13B3C9CE1DEE11940090491A /* DesignableTextView.swift in Sources */,
 				134117821DEF6365005CA7D2 /* GestureControl.swift in Sources */,
 				13B3C9C81DEE11940090491A /* BlurView.swift in Sources */,
+				1356413B1DF9EFE400BC3CC7 /* FirstAidSymptomTableViewCell.swift in Sources */,
 				13B3C9D51DEE11940090491A /* Misc.swift in Sources */,
 				13B3C9D71DEE11940090491A /* Spring.swift in Sources */,
 				13B3C9D21DEE11940090491A /* KeyboardLayoutConstraint.swift in Sources */,
