@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class NearbyViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
+class NearbyViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, UIPopoverPresentationControllerDelegate {
 
     @IBOutlet weak var nearbyMapView: MKMapView!
     let locationManager = CLLocationManager()
@@ -133,6 +133,31 @@ class NearbyViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         print("Select")
+        if let popoverController : UIViewController = self.storyboard?.instantiateViewController(withIdentifier: "popoverController") {
+            popoverController.modalPresentationStyle = .popover
+            popoverController.popoverPresentationController?.sourceView = view
+            popoverController.popoverPresentationController?.delegate = self
+            
+            var sourceRect : CGRect = CGRect.zero
+            sourceRect.origin.x += mapView.convert((view.annotation?.coordinate)!, toPointTo: mapView).x - view.frame.origin.x
+            sourceRect.size.height = view.frame.size.height
+            popoverController.popoverPresentationController?.sourceRect = view.bounds
+            popoverController.preferredContentSize = CGSize(width: 300, height: 150)
+            popoverController.popoverPresentationController?.permittedArrowDirections = .any
+            
+            self.present(popoverController, animated: true, completion: nil)
+            mapView.deselectAnnotation(view.annotation, animated: true)
+        }
+    }
+    
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController!) -> UIModalPresentationStyle {
+        // Return no adaptive presentation style, use default presentation behaviour
+        return .none
+    }
+    
+    func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle
+    {
+        return .none
     }
     
     /*
