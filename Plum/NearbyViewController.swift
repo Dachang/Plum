@@ -133,21 +133,23 @@ class NearbyViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         print("Select")
-        if let popoverController : UIViewController = self.storyboard?.instantiateViewController(withIdentifier: "popoverController") {
-            popoverController.modalPresentationStyle = .popover
-            popoverController.popoverPresentationController?.sourceView = view
-            popoverController.popoverPresentationController?.delegate = self
-            
-            var sourceRect : CGRect = CGRect.zero
-            sourceRect.origin.x += mapView.convert((view.annotation?.coordinate)!, toPointTo: mapView).x - view.frame.origin.x
-            sourceRect.size.height = view.frame.size.height
-            popoverController.popoverPresentationController?.sourceRect = view.bounds
-            popoverController.preferredContentSize = CGSize(width: 300, height: 150)
-            popoverController.popoverPresentationController?.permittedArrowDirections = .any
-            
-            self.present(popoverController, animated: true, completion: nil)
-            mapView.deselectAnnotation(view.annotation, animated: true)
-        }
+        let popoverController = self.storyboard?.instantiateViewController(withIdentifier: "popoverController") as! NearbyAnnotationCalloutPopoverViewController
+        
+        popoverController.modalPresentationStyle = .popover
+        popoverController.popoverPresentationController?.sourceView = view
+        popoverController.popoverPresentationController?.delegate = self
+        
+        var sourceRect : CGRect = CGRect.zero
+        sourceRect.origin.x += mapView.convert((view.annotation?.coordinate)!, toPointTo: mapView).x - view.frame.origin.x
+        sourceRect.size.height = view.frame.size.height
+        popoverController.popoverPresentationController?.sourceRect = view.bounds
+        popoverController.preferredContentSize = CGSize(width: 300, height: 150)
+        popoverController.popoverPresentationController?.permittedArrowDirections = .any
+        
+        popoverController.annotationNameString = "Gouverneur Health Care"
+        
+        self.present(popoverController, animated: true, completion: nil)
+        mapView.deselectAnnotation(view.annotation, animated: true)
     }
     
     func adaptivePresentationStyleForPresentationController(controller: UIPresentationController!) -> UIModalPresentationStyle {

@@ -1065,10 +1065,10 @@
             </objects>
             <point key="canvasLocation" x="984.79999999999995" y="1784.257871064468"/>
         </scene>
-        <!--View Controller-->
+        <!--Nearby Annotation Callout Popover View Controller-->
         <scene sceneID="Vuv-Dt-K8y">
             <objects>
-                <viewController storyboardIdentifier="popoverController" id="W8X-Yn-7KG" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="popoverController" id="W8X-Yn-7KG" customClass="NearbyAnnotationCalloutPopoverViewController" customModule="Plum" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="q4U-9M-518"/>
                         <viewControllerLayoutGuide type="bottom" id="KHj-RG-Z4H"/>
@@ -1076,12 +1076,73 @@
                     <view key="view" contentMode="scaleToFill" id="fVJ-Bc-jb4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gouverneur Health Care" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8aT-JC-JWR">
+                                <rect key="frame" x="18" y="32" width="266" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="QRS-mE-2Lh"/>
+                                    <constraint firstAttribute="width" constant="266" id="iNh-vq-Hid"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="646-881-8484" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="erb-vs-jc8">
+                                <rect key="frame" x="18" y="79" width="150" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="DeR-kw-8cU"/>
+                                    <constraint firstAttribute="height" constant="21" id="s7x-xY-7NR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.3451311118" green="0.35857047380000001" blue="0.414444645" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pkD-hv-R9t">
+                                <rect key="frame" x="254" y="74" width="30" height="30"/>
+                                <state key="normal" title="Call">
+                                    <color key="titleColor" red="1" green="0.2347312272" blue="0.31448560949999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k1h-zR-UD3">
+                                <rect key="frame" x="18" y="111" width="178" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="Fsb-Kh-WF1"/>
+                                    <constraint firstAttribute="width" constant="178" id="ved-Zg-Kmy"/>
+                                </constraints>
+                                <string key="text">227 Madison St, New York, 
+NY  10002, United States</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.3451311118" green="0.35857047380000001" blue="0.414444645" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uu2-Zg-YQ9">
+                                <rect key="frame" x="222" y="122" width="62" height="30"/>
+                                <state key="normal" title="Direction">
+                                    <color key="titleColor" red="1" green="0.2347312272" blue="0.31448560949999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="k1h-zR-UD3" firstAttribute="leading" secondItem="erb-vs-jc8" secondAttribute="leading" id="KXU-o5-dX7"/>
+                            <constraint firstItem="Uu2-Zg-YQ9" firstAttribute="centerY" secondItem="k1h-zR-UD3" secondAttribute="centerY" id="Ljk-pl-hM6"/>
+                            <constraint firstItem="erb-vs-jc8" firstAttribute="leading" secondItem="8aT-JC-JWR" secondAttribute="leading" id="MSz-dm-qAH"/>
+                            <constraint firstItem="8aT-JC-JWR" firstAttribute="top" secondItem="q4U-9M-518" secondAttribute="bottom" constant="12" id="UXd-Jn-xD7"/>
+                            <constraint firstItem="Uu2-Zg-YQ9" firstAttribute="trailing" secondItem="8aT-JC-JWR" secondAttribute="trailing" id="WcQ-s7-qeT"/>
+                            <constraint firstItem="k1h-zR-UD3" firstAttribute="top" secondItem="erb-vs-jc8" secondAttribute="bottom" constant="11" id="fGe-zr-IXE"/>
+                            <constraint firstItem="erb-vs-jc8" firstAttribute="top" secondItem="8aT-JC-JWR" secondAttribute="bottom" constant="26" id="jIt-HH-t4E"/>
+                            <constraint firstItem="8aT-JC-JWR" firstAttribute="leading" secondItem="fVJ-Bc-jb4" secondAttribute="leadingMargin" constant="2" id="mJs-bO-0Q9"/>
+                            <constraint firstItem="pkD-hv-R9t" firstAttribute="trailing" secondItem="8aT-JC-JWR" secondAttribute="trailing" id="st9-xu-uXC"/>
+                            <constraint firstItem="pkD-hv-R9t" firstAttribute="centerY" secondItem="erb-vs-jc8" secondAttribute="centerY" id="tDB-2g-Qmg"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="annotationName" destination="8aT-JC-JWR" id="ytx-V0-Ruo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5YM-4d-Sba" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3481" y="-159"/>
+            <point key="canvasLocation" x="3480.8000000000002" y="-159.67016491754123"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Zsy-89-swU">

@@ -76,6 +76,7 @@
 		13B3C9DF1DEE11940090491A /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B3C9C21DEE11940090491A /* TransitionManager.swift */; };
 		13B3C9E01DEE11940090491A /* TransitionZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B3C9C31DEE11940090491A /* TransitionZoom.swift */; };
 		13B3C9E11DEE11940090491A /* UnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B3C9C41DEE11940090491A /* UnwindSegue.swift */; };
+		13E216561E01FC6300A3D11B /* NearbyAnnotationCalloutPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E216551E01FC6300A3D11B /* NearbyAnnotationCalloutPopoverViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -163,6 +164,7 @@
 		13B3C9C21DEE11940090491A /* TransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
 		13B3C9C31DEE11940090491A /* TransitionZoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionZoom.swift; sourceTree = "<group>"; };
 		13B3C9C41DEE11940090491A /* UnwindSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnwindSegue.swift; sourceTree = "<group>"; };
+		13E216551E01FC6300A3D11B /* NearbyAnnotationCalloutPopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyAnnotationCalloutPopoverViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -369,6 +371,7 @@
 				139CC2B91DDE420D00B9DFB6 /* ProfileViewController.swift */,
 				139CC2C11DDE57A500B9DFB6 /* ProfileDetailTableViewController.swift */,
 				1341176C1DEEC4A3005CA7D2 /* WalkthroughViewController.swift */,
+				13E216551E01FC6300A3D11B /* NearbyAnnotationCalloutPopoverViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -553,6 +556,7 @@
 				13B3C9CE1DEE11940090491A /* DesignableTextView.swift in Sources */,
 				134117821DEF6365005CA7D2 /* GestureControl.swift in Sources */,
 				13B3C9C81DEE11940090491A /* BlurView.swift in Sources */,
+				13E216561E01FC6300A3D11B /* NearbyAnnotationCalloutPopoverViewController.swift in Sources */,
 				135083541E01EC910077236B /* ExampleCalloutView.swift in Sources */,
 				1356413B1DF9EFE400BC3CC7 /* FirstAidSymptomTableViewCell.swift in Sources */,
 				13B3C9D51DEE11940090491A /* Misc.swift in Sources */,
