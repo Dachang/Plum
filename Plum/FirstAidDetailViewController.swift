@@ -146,7 +146,7 @@ class FirstAidDetailViewController: UIViewController, UITableViewDelegate, UITab
             let dict = NSDictionary(contentsOfFile: path) as! [String: AnyObject]
             let dataset : [NSDictionary] = dict["FirstAidDataset"] as! [NSDictionary]
 
-            let firstAidDict : NSDictionary = dataset[firstAidIndex] as! NSDictionary
+            let firstAidDict : NSDictionary = dataset[firstAidIndex] 
             symptonArray = firstAidDict["Symtoms"] as! [String]
             methodArray = firstAidDict["Methods"] as! [String]
             cautionsArray = firstAidDict["Cautions"] as! [String]
