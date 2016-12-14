@@ -36,6 +36,8 @@
 		1341178C1DEF6556005CA7D2 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1341178B1DEF6556005CA7D2 /* Images.swift */; };
 		134F5A2F1DEE7C6C00D38366 /* ProfileDetailDeleteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134F5A2E1DEE7C6C00D38366 /* ProfileDetailDeleteTableViewCell.swift */; };
 		134F5A321DEE823F00D38366 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 134F5A311DEE823F00D38366 /* MapKit.framework */; };
+		135083531E01EC910077236B /* CalloutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135083511E01EC910077236B /* CalloutView.swift */; };
+		135083541E01EC910077236B /* ExampleCalloutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135083521E01EC910077236B /* ExampleCalloutView.swift */; };
 		1356413B1DF9EFE400BC3CC7 /* FirstAidSymptomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1356413A1DF9EFE400BC3CC7 /* FirstAidSymptomTableViewCell.swift */; };
 		13570F681DEE253B008F6774 /* ProfileListBannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13570F671DEE253B008F6774 /* ProfileListBannerTableViewCell.swift */; };
 		13570F6A1DEE2C1E008F6774 /* ProfileListSectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13570F691DEE2C1E008F6774 /* ProfileListSectionTableViewCell.swift */; };
@@ -120,6 +122,8 @@
 		1341178B1DEF6556005CA7D2 /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		134F5A2E1DEE7C6C00D38366 /* ProfileDetailDeleteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileDetailDeleteTableViewCell.swift; sourceTree = "<group>"; };
 		134F5A311DEE823F00D38366 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		135083511E01EC910077236B /* CalloutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalloutView.swift; sourceTree = "<group>"; };
+		135083521E01EC910077236B /* ExampleCalloutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleCalloutView.swift; sourceTree = "<group>"; };
 		1356413A1DF9EFE400BC3CC7 /* FirstAidSymptomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstAidSymptomTableViewCell.swift; sourceTree = "<group>"; };
 		13570F671DEE253B008F6774 /* ProfileListBannerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileListBannerTableViewCell.swift; sourceTree = "<group>"; };
 		13570F691DEE2C1E008F6774 /* ProfileListSectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileListSectionTableViewCell.swift; sourceTree = "<group>"; };
@@ -342,6 +346,8 @@
 		139CC2BD1DDE469A00B9DFB6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				135083511E01EC910077236B /* CalloutView.swift */,
+				135083521E01EC910077236B /* ExampleCalloutView.swift */,
 				1312C53C1DDD6D6900058BFC /* FirstAidTableViewCell.swift */,
 				139CC2BF1DDE46C700B9DFB6 /* ProfileDetailTableViewCell.swift */,
 				13570F671DEE253B008F6774 /* ProfileListBannerTableViewCell.swift */,
@@ -547,6 +553,7 @@
 				13B3C9CE1DEE11940090491A /* DesignableTextView.swift in Sources */,
 				134117821DEF6365005CA7D2 /* GestureControl.swift in Sources */,
 				13B3C9C81DEE11940090491A /* BlurView.swift in Sources */,
+				135083541E01EC910077236B /* ExampleCalloutView.swift in Sources */,
 				1356413B1DF9EFE400BC3CC7 /* FirstAidSymptomTableViewCell.swift in Sources */,
 				13B3C9D51DEE11940090491A /* Misc.swift in Sources */,
 				13B3C9D71DEE11940090491A /* Spring.swift in Sources */,
@@ -587,6 +594,7 @@
 				1341178C1DEF6556005CA7D2 /* Images.swift in Sources */,
 				134117811DEF6365005CA7D2 /* FillAnimationView.swift in Sources */,
 				134117881DEF6365005CA7D2 /* PageContainer.swift in Sources */,
+				135083531E01EC910077236B /* CalloutView.swift in Sources */,
 				13078A781E00A47B00BE561C /* FirstAidSymptomBulletinTableViewCell.swift in Sources */,
 				13B3C9CB1DEE11940090491A /* DesignableLabel.swift in Sources */,
 				13B3C9DC1DEE11940090491A /* SpringTextField.swift in Sources */,
