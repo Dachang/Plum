@@ -2,6 +2,351 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>FirstAidDataset</key>
+	<array>
+		<dict>
+			<key>Symtoms</key>
+			<array>
+				<string>Wounds may have congestion, swelling and pain. Severe fractures may cause limb deformities, or open wounds.</string>
+			</array>
+			<key>Methods</key>
+			<array>
+				<string>Encourage the injured use hands, shirts, clothing and other support materials to fix the limb, try to avoid unnecessary movement.</string>
+				<string>If the injured feels severe pain or can not move, make sure the wounded area is fixed until the medical staff arrive.</string>
+			</array>
+			<key>Cautions</key>
+			<array>
+				<string>Do not try to move or recover the deformed wounded since it may leads to further damage.</string>
+				<string>If the Injured is able to move or walk, it does not mean there is no fracture. Further X-ray examination is needed to confirm the result.</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Symtoms</key>
+			<array>
+				<string>Wounds may have congestion, swelling and pain. Severe fractures may cause limb deformities, or open wounds.</string>
+				<string>Wounds may have congestion, swelling and pain. Severe fractures may cause limb deformities, or open wounds.</string>
+				<string>Wounds may have congestion, swelling and pain. Severe fractures may cause limb deformities, or open wounds.</string>
+			</array>
+			<key>Methods</key>
+			<array>
+				<string>Encourage the injured use hands, shirts, clothing and other support materials to fix the limb, try to avoid unnecessary movement.</string>
+				<string>If the injured feels severe pain or can not move, make sure the wounded area is fixed until the medical staff arrive.</string>
+			</array>
+			<key>Cautions</key>
+			<array>
+				<string>Do not try to move or recover the deformed wounded since it may leads to further damage.</string>
+				<string>If the Injured is able to move or walk, it does not mean there is no fracture. Further X-ray examination is needed to confirm the result.</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Symtoms</key>
+			<array>
+				<string>Wounds may have congestion, swelling and pain. Severe fractures may cause limb deformities, or open wounds.</string>
+			</array>
+			<key>Methods</key>
+			<array>
+				<string>If the injured feels severe pain or can not move, make sure the wounded area is fixed until the medical staff arrive.</string>
+				<string>If the injured feels severe pain or can not move, make sure the wounded area is fixed until the medical staff arrive.</string>
+				<string>Encourage the injured use hands, shirts, clothing and other support materials to fix the limb, try to avoid unnecessary movement.</string>
+				<string>If the injured feels severe pain or can not move, make sure the wounded area is fixed until the medical staff arrive.</string>
+			</array>
+			<key>Cautions</key>
+			<array>
+				<string>Do not try to move or recover the deformed wounded since it may leads to further damage.</string>
+				<string>If the Injured is able to move or walk, it does not mean there is no fracture. Further X-ray examination is needed to confirm the result.</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Symtoms</key>
+			<array>
+				<string>Wounds may have congestion, swelling and pain. Severe fractures may cause limb deformities, or open wounds.</string>
+				<string>Wounds may have congestion, swelling and pain. Severe fractures may cause limb deformities, or open wounds.</string>
+			</array>
+			<key>Methods</key>
+			<array>
+				<string>Encourage the injured use hands, shirts, clothing and other support materials to fix the limb, try to avoid unnecessary movement.</string>
+				<string>If the injured feels severe pain or can not move, make sure the wounded area is fixed until the medical staff arrive.</string>
+			</array>
+			<key>Cautions</key>
+			<array>
+				<string>Do not try to move or recover the deformed wounded since it may leads to further damage.</string>
+				<string>If the Injured is able to move or walk, it does not mean there is no fracture. Further X-ray examination is needed to confirm the result.</string>
+				<string>If the Injured is able to move or walk, it does not mean there is no fracture. Further X-ray examination is needed to confirm the result.</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Symtoms</key>
+			<array>
+				<string>Wounds may have congestion, swelling and pain. Severe fractures may cause limb deformities, or open wounds.</string>
+			</array>
+			<key>Methods</key>
+			<array>
+				<string>Encourage the injured use hands, shirts, clothing and other support materials to fix the limb, try to avoid unnecessary movement.</string>
+				<string>If the injured feels severe pain or can not move, make sure the wounded area is fixed until the medical staff arrive.</string>
+			</array>
+			<key>Cautions</key>
+			<array>
+				<string>Do not try to move or recover the deformed wounded since it may leads to further damage.</string>
+				<string>If the Injured is able to move or walk, it does not mean there is no fracture. Further X-ray examination is needed to confirm the result.</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Symtoms</key>
+			<array>
+				<string>Wounds may have congestion, swelling and pain. Severe fractures may cause limb deformities, or open wounds.</string>
+			</array>
+			<key>Methods</key>
+			<array>
+				<string>Encourage the injured use hands, shirts, clothing and other support materials to fix the limb, try to avoid unnecessary movement.</string>
+				<string>If the injured feels severe pain or can not move, make sure the wounded area is fixed until the medical staff arrive.</string>
+			</array>
+			<key>Cautions</key>
+			<array>
+				<string>Do not try to move or recover the deformed wounded since it may leads to further damage.</string>
+				<string>If the Injured is able to move or walk, it does not mean there is no fracture. Further X-ray examination is needed to confirm the result.</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Symtoms</key>
+			<array>
+				<string>Wounds may have congestion, swelling and pain. Severe fractures may cause limb deformities, or open wounds.</string>
+			</array>
+			<key>Methods</key>
+			<array>
+				<string>Encourage the injured use hands, shirts, clothing and other support materials to fix the limb, try to avoid unnecessary movement.</string>
+				<string>If the injured feels severe pain or can not move, make sure the wounded area is fixed until the medical staff arrive.</string>
+			</array>
+			<key>Cautions</key>
+			<array>
+				<string>Do not try to move or recover the deformed wounded since it may leads to further damage.</string>
+				<string>If the Injured is able to move or walk, it does not mean there is no fracture. Further X-ray examination is needed to confirm the result.</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Symtoms</key>
+			<array>
+				<string>Wounds may have congestion, swelling and pain. Severe fractures may cause limb deformities, or open wounds.</string>
+			</array>
+			<key>Methods</key>
+			<array>
+				<string>Encourage the injured use hands, shirts, clothing and other support materials to fix the limb, try to avoid unnecessary movement.</string>
+				<string>If the injured feels severe pain or can not move, make sure the wounded area is fixed until the medical staff arrive.</string>
+			</array>
+			<key>Cautions</key>
+			<array>
+				<string>Do not try to move or recover the deformed wounded since it may leads to further damage.</string>
+				<string>If the Injured is able to move or walk, it does not mean there is no fracture. Further X-ray examination is needed to confirm the result.</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Symtoms</key>
+			<array>
+				<string>Wounds may have congestion, swelling and pain. Severe fractures may cause limb deformities, or open wounds.</string>
+			</array>
+			<key>Methods</key>
+			<array>
+				<string>Encourage the injured use hands, shirts, clothing and other support materials to fix the limb, try to avoid unnecessary movement.</string>
+				<string>If the injured feels severe pain or can not move, make sure the wounded area is fixed until the medical staff arrive.</string>
+			</array>
+			<key>Cautions</key>
+			<array>
+				<string>Do not try to move or recover the deformed wounded since it may leads to further damage.</string>
+				<string>If the Injured is able to move or walk, it does not mean there is no fracture. Further X-ray examination is needed to confirm the result.</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Symtoms</key>
+			<array>
+				<string>Wounds may have congestion, swelling and pain. Severe fractures may cause limb deformities, or open wounds.</string>
+			</array>
+			<key>Methods</key>
+			<array>
+				<string>Encourage the injured use hands, shirts, clothing and other support materials to fix the limb, try to avoid unnecessary movement.</string>
+				<string>If the injured feels severe pain or can not move, make sure the wounded area is fixed until the medical staff arrive.</string>
+			</array>
+			<key>Cautions</key>
+			<array>
+				<string>Do not try to move or recover the deformed wounded since it may leads to further damage.</string>
+				<string>If the Injured is able to move or walk, it does not mean there is no fracture. Further X-ray examination is needed to confirm the result.</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Symtoms</key>
+			<array>
+				<string>Wounds may have congestion, swelling and pain. Severe fractures may cause limb deformities, or open wounds.</string>
+			</array>
+			<key>Methods</key>
+			<array>
+				<string>Encourage the injured use hands, shirts, clothing and other support materials to fix the limb, try to avoid unnecessary movement.</string>
+				<string>If the injured feels severe pain or can not move, make sure the wounded area is fixed until the medical staff arrive.</string>
+			</array>
+			<key>Cautions</key>
+			<array>
+				<string>Do not try to move or recover the deformed wounded since it may leads to further damage.</string>
+				<string>If the Injured is able to move or walk, it does not mean there is no fracture. Further X-ray examination is needed to confirm the result.</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Symtoms</key>
+			<array>
+				<string>Wounds may have congestion, swelling and pain. Severe fractures may cause limb deformities, or open wounds.</string>
+			</array>
+			<key>Methods</key>
+			<array>
+				<string>Encourage the injured use hands, shirts, clothing and other support materials to fix the limb, try to avoid unnecessary movement.</string>
+				<string>If the injured feels severe pain or can not move, make sure the wounded area is fixed until the medical staff arrive.</string>
+			</array>
+			<key>Cautions</key>
+			<array>
+				<string>Do not try to move or recover the deformed wounded since it may leads to further damage.</string>
+				<string>If the Injured is able to move or walk, it does not mean there is no fracture. Further X-ray examination is needed to confirm the result.</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Symtoms</key>
+			<array>
+				<string>Wounds may have congestion, swelling and pain. Severe fractures may cause limb deformities, or open wounds.</string>
+			</array>
+			<key>Methods</key>
+			<array>
+				<string>Encourage the injured use hands, shirts, clothing and other support materials to fix the limb, try to avoid unnecessary movement.</string>
+				<string>If the injured feels severe pain or can not move, make sure the wounded area is fixed until the medical staff arrive.</string>
+			</array>
+			<key>Cautions</key>
+			<array>
+				<string>Do not try to move or recover the deformed wounded since it may leads to further damage.</string>
+				<string>If the Injured is able to move or walk, it does not mean there is no fracture. Further X-ray examination is needed to confirm the result.</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Symtoms</key>
+			<array>
+				<string>Wounds may have congestion, swelling and pain. Severe fractures may cause limb deformities, or open wounds.</string>
+			</array>
+			<key>Methods</key>
+			<array>
+				<string>Encourage the injured use hands, shirts, clothing and other support materials to fix the limb, try to avoid unnecessary movement.</string>
+				<string>If the injured feels severe pain or can not move, make sure the wounded area is fixed until the medical staff arrive.</string>
+			</array>
+			<key>Cautions</key>
+			<array>
+				<string>Do not try to move or recover the deformed wounded since it may leads to further damage.</string>
+				<string>If the Injured is able to move or walk, it does not mean there is no fracture. Further X-ray examination is needed to confirm the result.</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Symtoms</key>
+			<array>
+				<string>Wounds may have congestion, swelling and pain. Severe fractures may cause limb deformities, or open wounds.</string>
+			</array>
+			<key>Methods</key>
+			<array>
+				<string>Encourage the injured use hands, shirts, clothing and other support materials to fix the limb, try to avoid unnecessary movement.</string>
+				<string>If the injured feels severe pain or can not move, make sure the wounded area is fixed until the medical staff arrive.</string>
+			</array>
+			<key>Cautions</key>
+			<array>
+				<string>Do not try to move or recover the deformed wounded since it may leads to further damage.</string>
+				<string>If the Injured is able to move or walk, it does not mean there is no fracture. Further X-ray examination is needed to confirm the result.</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Symtoms</key>
+			<array>
+				<string>Wounds may have congestion, swelling and pain. Severe fractures may cause limb deformities, or open wounds.</string>
+			</array>
+			<key>Methods</key>
+			<array>
+				<string>Encourage the injured use hands, shirts, clothing and other support materials to fix the limb, try to avoid unnecessary movement.</string>
+				<string>If the injured feels severe pain or can not move, make sure the wounded area is fixed until the medical staff arrive.</string>
+			</array>
+			<key>Cautions</key>
+			<array>
+				<string>Do not try to move or recover the deformed wounded since it may leads to further damage.</string>
+				<string>If the Injured is able to move or walk, it does not mean there is no fracture. Further X-ray examination is needed to confirm the result.</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Symtoms</key>
+			<array>
+				<string>Wounds may have congestion, swelling and pain. Severe fractures may cause limb deformities, or open wounds.</string>
+			</array>
+			<key>Methods</key>
+			<array>
+				<string>Encourage the injured use hands, shirts, clothing and other support materials to fix the limb, try to avoid unnecessary movement.</string>
+				<string>If the injured feels severe pain or can not move, make sure the wounded area is fixed until the medical staff arrive.</string>
+			</array>
+			<key>Cautions</key>
+			<array>
+				<string>Do not try to move or recover the deformed wounded since it may leads to further damage.</string>
+				<string>If the Injured is able to move or walk, it does not mean there is no fracture. Further X-ray examination is needed to confirm the result.</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Symtoms</key>
+			<array>
+				<string>Wounds may have congestion, swelling and pain. Severe fractures may cause limb deformities, or open wounds.</string>
+			</array>
+			<key>Methods</key>
+			<array>
+				<string>Encourage the injured use hands, shirts, clothing and other support materials to fix the limb, try to avoid unnecessary movement.</string>
+				<string>If the injured feels severe pain or can not move, make sure the wounded area is fixed until the medical staff arrive.</string>
+			</array>
+			<key>Cautions</key>
+			<array>
+				<string>Do not try to move or recover the deformed wounded since it may leads to further damage.</string>
+				<string>If the Injured is able to move or walk, it does not mean there is no fracture. Further X-ray examination is needed to confirm the result.</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Symtoms</key>
+			<array>
+				<string>Wounds may have congestion, swelling and pain. Severe fractures may cause limb deformities, or open wounds.</string>
+			</array>
+			<key>Methods</key>
+			<array>
+				<string>Encourage the injured use hands, shirts, clothing and other support materials to fix the limb, try to avoid unnecessary movement.</string>
+				<string>If the injured feels severe pain or can not move, make sure the wounded area is fixed until the medical staff arrive.</string>
+			</array>
+			<key>Cautions</key>
+			<array>
+				<string>Do not try to move or recover the deformed wounded since it may leads to further damage.</string>
+				<string>If the Injured is able to move or walk, it does not mean there is no fracture. Further X-ray examination is needed to confirm the result.</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Symtoms</key>
+			<array>
+				<string>Wounds may have congestion, swelling and pain. Severe fractures may cause limb deformities, or open wounds.</string>
+			</array>
+			<key>Methods</key>
+			<array>
+				<string>Encourage the injured use hands, shirts, clothing and other support materials to fix the limb, try to avoid unnecessary movement.</string>
+				<string>If the injured feels severe pain or can not move, make sure the wounded area is fixed until the medical staff arrive.</string>
+			</array>
+			<key>Cautions</key>
+			<array>
+				<string>Do not try to move or recover the deformed wounded since it may leads to further damage.</string>
+				<string>If the Injured is able to move or walk, it does not mean there is no fracture. Further X-ray examination is needed to confirm the result.</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Symtoms</key>
+			<array>
+				<string>Wounds may have congestion, swelling and pain. Severe fractures may cause limb deformities, or open wounds.</string>
+			</array>
+			<key>Methods</key>
+			<array>
+				<string>Encourage the injured use hands, shirts, clothing and other support materials to fix the limb, try to avoid unnecessary movement.</string>
+				<string>If the injured feels severe pain or can not move, make sure the wounded area is fixed until the medical staff arrive.</string>
+			</array>
+			<key>Cautions</key>
+			<array>
+				<string>Do not try to move or recover the deformed wounded since it may leads to further damage.</string>
+				<string>If the Injured is able to move or walk, it does not mean there is no fracture. Further X-ray examination is needed to confirm the result.</string>
+			</array>
+		</dict>
+	</array>
 	<key>FirstAidName</key>
 	<array>
 		<string>CPR</string>

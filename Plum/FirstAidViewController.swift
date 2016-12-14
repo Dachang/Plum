@@ -78,6 +78,7 @@ class FirstAidViewController: UIViewController, UITableViewDelegate, UITableView
         let firstAidDetailViewController = segue.destination as? FirstAidDetailViewController
         let currentIndex = (firstAidTableView.indexPath(for: sender as! FirstAidTableViewCell)?.row)!
         firstAidDetailViewController?.title = firstAidArray[currentIndex].firstAidName
+        firstAidDetailViewController?.firstAidIndex = currentIndex
     }
 
 }

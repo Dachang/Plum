@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		13078A781E00A47B00BE561C /* FirstAidSymptomBulletinTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13078A771E00A47B00BE561C /* FirstAidSymptomBulletinTableViewCell.swift */; };
+		13078A7A1E00AA2400BE561C /* FirstAidDataset.plist in Resources */ = {isa = PBXBuildFile; fileRef = 13078A791E00AA2400BE561C /* FirstAidDataset.plist */; };
 		1312C51B1DDD309200058BFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1312C51A1DDD309200058BFC /* AppDelegate.swift */; };
 		1312C51D1DDD309200058BFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1312C51C1DDD309200058BFC /* ViewController.swift */; };
 		1312C5201DDD309200058BFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1312C51E1DDD309200058BFC /* Main.storyboard */; };
@@ -87,6 +88,7 @@
 
 /* Begin PBXFileReference section */
 		13078A771E00A47B00BE561C /* FirstAidSymptomBulletinTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstAidSymptomBulletinTableViewCell.swift; sourceTree = "<group>"; };
+		13078A791E00AA2400BE561C /* FirstAidDataset.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FirstAidDataset.plist; sourceTree = "<group>"; };
 		1312C5171DDD309200058BFC /* Plum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Plum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1312C51A1DDD309200058BFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1312C51C1DDD309200058BFC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 				1312C5231DDD309200058BFC /* LaunchScreen.storyboard */,
 				1312C5411DDD7AC000058BFC /* FirstAidList.plist */,
 				1312C5261DDD309200058BFC /* Info.plist */,
+				13078A791E00AA2400BE561C /* FirstAidDataset.plist */,
 			);
 			path = Plum;
 			sourceTree = "<group>";
@@ -498,6 +501,7 @@
 				13B3C9D41DEE11940090491A /* LoadingView.xib in Resources */,
 				13B3C9D11DEE11940090491A /* Info.plist in Resources */,
 				1312C5201DDD309200058BFC /* Main.storyboard in Resources */,
+				13078A7A1E00AA2400BE561C /* FirstAidDataset.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

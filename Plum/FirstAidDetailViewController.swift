@@ -12,8 +12,14 @@ class FirstAidDetailViewController: UIViewController, UITableViewDelegate, UITab
 
     @IBOutlet weak var firstAidDetailTableView: UITableView!
     
+    var firstAidIndex : Int = 0
+    
     var sectionIconArray : [String] = [String]()
     var sectionNameArray : [String] = [String]()
+    
+    var symptonArray : [String] = [String]()
+    var methodArray : [String] = [String]()
+    var cautionsArray : [String] = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +31,8 @@ class FirstAidDetailViewController: UIViewController, UITableViewDelegate, UITab
         
         sectionIconArray = ["Symptom_Icon", "FirstAidMethod_Icon", "Cautions_Icon"]
         sectionNameArray = ["Symptom", "First Aid Method", "Cautions"]
+        
+        readFirstAidDataFromFile()
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,9 +49,11 @@ class FirstAidDetailViewController: UIViewController, UITableViewDelegate, UITab
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
-            return 1
-        case 1, 2:
-            return 2
+            return symptonArray.count
+        case 1:
+            return methodArray.count
+        case 2:
+            return cautionsArray.count
         default:
             return 0
         }
@@ -75,7 +85,17 @@ class FirstAidDetailViewController: UIViewController, UITableViewDelegate, UITab
             
             let cell = tableView.dequeueReusableCell(withIdentifier: firstAidSymptomCellIdentifier, for: indexPath) as! FirstAidSymptomTableViewCell
             
-            cell.symtomTextView.text = "Wounds may have congestion, swelling and pain. Severe fractures may cause limb deformities, or open wounds."
+            switch indexPath.section {
+            case 0:
+                cell.symtomTextView.text = symptonArray[0]
+            case 1:
+                cell.symtomTextView.text = methodArray[0]
+            case 2:
+                cell.symtomTextView.text = cautionsArray[0]
+            default:
+                cell.symtomTextView.text = "Wounds may have congestion, swelling and pain. Severe fractures may cause limb deformities, or open wounds."
+            }
+            
             cell.symptomIconImage.image = UIImage(named: sectionIconArray[indexPath.section])
             cell.symptomLabel.text = sectionNameArray[indexPath.section]
             
@@ -93,7 +113,16 @@ class FirstAidDetailViewController: UIViewController, UITableViewDelegate, UITab
             
             let cell = tableView.dequeueReusableCell(withIdentifier: firstAidSymptomBulletinCellIdentifier, for: indexPath) as! FirstAidSymptomBulletinTableViewCell
             
-            cell.textView.text = "Wounds may have congestion, swelling and pain. Severe fractures may cause limb deformities, or open wounds."
+            switch indexPath.section {
+            case 0:
+                cell.textView.text = symptonArray[indexPath.row]
+            case 1:
+                cell.textView.text = methodArray[indexPath.row]
+            case 2:
+                cell.textView.text = cautionsArray[indexPath.row]
+            default:
+                cell.textView.text = "Wounds may have congestion, swelling and pain. Severe fractures may cause limb deformities, or open wounds."
+            }
             
             let sizeThatFitsTextView : CGSize = cell.textView.sizeThatFits(CGSize(width: cell.textView.frame.size.width, height: CGFloat(MAXFLOAT)))
             cell.textViewHeight.constant = sizeThatFitsTextView.height
@@ -109,6 +138,21 @@ class FirstAidDetailViewController: UIViewController, UITableViewDelegate, UITab
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    // MARK: - Initialize Data
+    func readFirstAidDataFromFile() {
+        if let path = Bundle.main.path(forResource: "FirstAidList", ofType: "plist") {
+            let dict = NSDictionary(contentsOfFile: path) as! [String: AnyObject]
+            let dataset : [NSDictionary] = dict["FirstAidDataset"] as! [NSDictionary]
+
+            let firstAidDict : NSDictionary = dataset[firstAidIndex] as! NSDictionary
+            symptonArray = firstAidDict["Symtoms"] as! [String]
+            methodArray = firstAidDict["Methods"] as! [String]
+            cautionsArray = firstAidDict["Cautions"] as! [String]
+        }
+        
+        
     }
 
     /*
