@@ -146,6 +146,7 @@ class NearbyViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
         popoverController.preferredContentSize = CGSize(width: 300, height: 150)
         popoverController.popoverPresentationController?.permittedArrowDirections = .any
         
+        popoverController.annotationNameString = (view.annotation?.title)!
         popoverController.annotationNameString = "Gouverneur Health Care"
         
         self.present(popoverController, animated: true, completion: nil)
